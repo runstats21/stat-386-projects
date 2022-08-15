@@ -1,4 +1,0 @@
-Welcome!
-
-[about](about.md)
-

@@ -1,4 +1,3 @@
 # stat386-projects
 
-1. Hello
-2. Hello
+This the repo for the Stat386 blog projects.
