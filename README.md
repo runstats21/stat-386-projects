@@ -31,7 +31,7 @@ Note that the layout should stay as "post", but all the other fields you need to
 
 OR
 
-![Figure](https://github.com/esnt/stat386-projects/raw/main/assets/images/front.jpg)
+![Figure](https://github.com/esnt/stat386-projects/raw/main/assets/images/image5.jpg)
 ```
 
 ![Figure](https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg)
@@ -40,12 +40,14 @@ There isn't a good way to resize images with markdown, but you can use `html` di
 
 `<img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg", alt="", style=width:400px;"/>`
 
+(Width is 400 pixels)
 <img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg" alt="" style="width:400px;"/>
 
-OR 
+
 
 `<img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg", alt="", style=width:100px;"/>`
 
+(Width is 100 pixels)
 <img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg" alt="" style="width:100px;"/>
 
 
