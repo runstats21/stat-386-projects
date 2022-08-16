@@ -274,3 +274,28 @@
   object-fit: cover;
   float: left;
 }
+
+.banner-btn {
+  margin-top: 1em;
+}
+
+.banner-btn-item {
+  font-size: calc(8pt + 0.15vw); // responsive size, but keep a minimum.
+  padding-top: calc(0.5em + 0.08vw);
+  padding-bottom: calc(0.5em + 0.08vw);
+  padding-left: calc(0.5em + 0.08vw);
+  padding-right: calc(0.5em + 0.08vw);
+  color: blue;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid white;
+
+  &:link {
+    text-decoration: none;
+  }
+  &:visited {
+    text-decoration: none;
+  }
+}
