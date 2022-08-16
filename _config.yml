@@ -18,19 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: My Stat 386 Blog
-email: esnt@byu.edu
+title: Blog Title # Make a title for your blog
+email: author_email@email.com # Add your email 
 description: >- # this means to ignore newlines until "baseurl:"
- This is my blog that describes my Stat 386 projects
-baseurl: "/stat386-projects" # the subpath of your site, e.g. /blog
-url: "https://esnt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: es_tass
-github_username:  esnt
-linkedin_username: e-shannon-tass
-author: Shannon Tass
+ Change the description so that it describes your blog
+baseurl: "/stat386-projects" # keep this the same or change it to the name of the repository 
+url: "https://<your-github-username>.github.io" #  
+author: Your name
+copyright: ABCD # Your initials or what you want the copyright to be.  Leave empty for no copyright
 
-# New fields not shipped with minima theme
-copyright: "ESNT"
+# Social media users names.  Leave fields blank that you don't want displayed
+twitter_username:  me
+github_username:  me
+linkedin_username: me
+
 
 # Build settings
 # removed minima theme to a regular theme
