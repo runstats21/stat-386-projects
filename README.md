@@ -12,22 +12,23 @@ This the repo for the Stat386 blog projects.
 layout: post
 title:  "Post Name"
 date:   YYYY-MM-DD
+author: Your name
 description: Short yet informative description
 image: /assets/images/blog-image.jpg
 ---
 ```
 Note that the layout should stay as "post", but all the other fields you need to update with the information for your particular blog post.  The blog image should be a .jpg or .png file that you should add to the folder "assets/images".  Don't make it too large or the page will take longer to load (500-800 KB is a good size)
 
-3.  Write the body of the blog using markdown.  
-
-* Use `#` for section headings 
-```
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-```
-
+3.  Write the body of the blog using markdown.  For more information about writing with markdown, see the following 
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+
+### Some helpful tips to keep in mind for the blog:
+
+#### Code snippets
+
+Use a single back quote for inline code:
+
+This is ``code``
+
