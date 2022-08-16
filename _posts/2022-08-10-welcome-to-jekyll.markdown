@@ -51,7 +51,7 @@ For more information about writing markdown you can checkout the following markd
 5. Item 5
 
 **Images in the post will look like:**<br>
-![Test Image](stat386-projects/assets/images/image5.jpg)
+![Test Image](/assets/images/image5.jpg)
 
 **Normal text in the post will look like**<br>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id finibus nisl. Etiam in hendrerit est. Nulla non erat ac lectus interdum lobortis. Vestibulum at mi ex. Mauris nisl mi, venenatis et feugiat nec, finibus porttitor velit. Suspendisse tincidunt lobortis leo, quis tristique tellus iaculis quis. Donec eleifend pulvinar gravida. Proin non lorem eros. Donec sit amet finibus ex, eget vestibulum nunc. Ut ut enim id purus porttitor tristique. Vivamus tincidunt eleifend hendrerit. Proin metus felis, ultrices vel dui in, porta dapibus dui. Sed sagittis ex vitae dui tristique dignissim. Cras vel leo ipsum.
