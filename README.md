@@ -29,5 +29,16 @@ Note that the layout should stay as "post", but all the other fields you need to
 ```
 ![Figure](https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg)
 ```
+![Figure](https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg)
 
+There isn't a good way to resize images with markdown, but you can use `html` directly to resize an image:
 
+`<img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg", alt="", style=width:400px;"/>`
+
+<img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg" alt="" style="width:400px;"/>
+
+OR 
+
+`<img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg", alt="", style=width:100px;"/>`
+
+<img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg" alt="" style="width:100px;"/>
