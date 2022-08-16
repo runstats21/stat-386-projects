@@ -21,7 +21,7 @@
 title: My Stat 386 Blog
 email: esnt@byu.edu
 description: >- # this means to ignore newlines until "baseurl:"
- This a blog site that describes my Stat 386 projects
+ This is my blog that describes my Stat 386 projects
 baseurl: "/stat386-projects" # the subpath of your site, e.g. /blog
 url: "https://esnt.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: es_tass

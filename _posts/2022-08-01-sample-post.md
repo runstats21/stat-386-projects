@@ -1,14 +1,16 @@
 ---
 layout: post
 title:  "Sample Post"
-date:   2022-08-10 11:24:47 -0700
-description: A sample post to show how the content will look and how will different
+date:   2022-08-01 11:24:47 -0700
+author: Shannon Tass
+description: A sample post to show how the content will look and how different
   headlines, quotes and codes will be represented.
+image: /assets/images/image5.jpg
 ---
 
 
 
-This post will show you how the content will look like in the post pages and how the headlines, quotes and quotes will be represented. Jekyll is mainly used to write simple markdown and after that it renders out a static pages, so you need to know the basics of writing markdown for that.
+This post will show you how the content will look in the post pages and how the headlines, quotes, lists, code block, and other items will be represented. Jekyll is mainly used to write simple markdown and after that it renders out a static pages, so you need to know the basics of writing markdown for that.
 For more information about writing markdown you can checkout the following markdown cheatsheets:
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
