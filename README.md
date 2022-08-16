@@ -42,3 +42,6 @@ OR
 `<img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg", alt="", style=width:100px;"/>`
 
 <img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg" alt="" style="width:100px;"/>
+
+
+<img src="https://github.com/esnt/stat386-projects/raw/main/assets/images/front.jpg" alt="" style="wdith:200px;"/>
