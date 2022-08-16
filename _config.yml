@@ -27,6 +27,10 @@ url: "https://esnt.github.io" # the base hostname & protocol for your site, e.g.
 twitter_username: es_tass
 github_username:  esnt
 linkedin_username: e-shannon-tass
+author: Shannon Tass
+
+# New fields not shipped with minima theme
+copyright: "ESNT"
 
 # Build settings
 # removed minima theme to a regular theme
