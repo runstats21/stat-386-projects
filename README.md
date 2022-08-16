@@ -17,18 +17,17 @@ description: Short yet informative description
 image: /assets/images/blog-image.jpg
 ---
 ```
-Note that the layout should stay as "post", but all the other fields you need to update with the information for your particular blog post.  The blog image should be a .jpg or .png file that you should add to the folder "assets/images".  Don't make it too large or the page will take longer to load (500-800 KB is a good size)
+Note that the layout should stay as "post", but all the other fields you need to update with the information for your particular blog post.  The blog image should be a .jpg or .png file that you should add to the folder "assets/images".  Don't make it too large or the page will take longer to load (500-800 KB is a good size).  The file path should be okay to leave as "/assets/images/" in the header area.  
 
 3.  Write the body of the blog using markdown.  For more information about writing with markdown, see the following 
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 
-### Some helpful tips to keep in mind for the blog:
+4.  Images for the blog will generally but put into the 'assets/images' folder.  You can aslo create a subfolder for each blog post if you'd like to keep your figures organized.  I've found that in the body of the post, it works better to use a url pointing to the figure's location.  For example:
 
-#### Code snippets
+```
+![Figure](https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg)
+```
 
-Use a single back quote for inline code:
-
-This is ``code``
 
