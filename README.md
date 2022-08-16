@@ -24,11 +24,16 @@ Note that the layout should stay as "post", but all the other fields you need to
 * [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 
-4.  Images for the blog will generally but put into the 'assets/images' folder.  You can aslo create a subfolder for each blog post if you'd like to keep your figures organized.  I've found that in the body of the post, it works better to use a url pointing to the figure's location.  For example:
+4.  Images for the blog will generally but put into the 'assets/images' folder.  You can aslo create a subfolder for each blog post if you'd like to keep your figures organized.  I've found that in the body of the post, it works better to use a url pointing to the figure's location.  In order to find the appropriate url, navigate to the figure in the repository and find the "download" url.  The correct url will typically have the work "raw" either at the beginning or as `/raw/` in the middle somewhere. For example:
 
 ```
 ![Figure](https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg)
+
+OR
+
+![Figure](https://github.com/esnt/stat386-projects/raw/main/assets/images/front.jpg)
 ```
+
 ![Figure](https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg)
 
 There isn't a good way to resize images with markdown, but you can use `html` directly to resize an image:
@@ -44,4 +49,3 @@ OR
 <img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg" alt="" style="width:100px;"/>
 
 
-<img src="https://github.com/esnt/stat386-projects/raw/main/assets/images/front.jpg" alt="" style="wdith:200px;"/>
