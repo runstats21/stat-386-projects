@@ -50,4 +50,4 @@ There isn't a good way to resize images with markdown, but you can use `html` di
 (Width is 100 pixels)
 <img src="https://raw.githubusercontent.com/esnt/stat386-projects/main/assets/images/image5.jpg" alt="" style="width:100px;"/>
 
-
+This repository is cloned from [github.com/esnt/stat386-projects](https://github.com/esnt/stat386-projects) which was originally built by following [these excellent youtube tutorials](https://www.youtube.com/playlist?list=PLWzwUIYZpnJuT0sH4BN56P5oWTdHJiTNq) by Bill Raymond.
