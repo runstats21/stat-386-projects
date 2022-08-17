@@ -23,11 +23,14 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {% assign words = post.content | number_of_words %}
+        {%- unless content.size == 0 -%}
+         <span class="post-meta">   •  {{ words | divided_by:180 }} min read</span>
+      {%- endunless -%}
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
-         
         </h3>
         {%- if post.description -%}
         <font size="-1"> <em> {{post.description}} </font></em>
