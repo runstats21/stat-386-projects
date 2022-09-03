@@ -7,6 +7,8 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
+  <img src="{{- site.image | relative_url -}}" alt="">
+  
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
