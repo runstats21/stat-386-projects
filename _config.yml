@@ -24,8 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
  Change the description so that it describes your blog
 baseurl: "/stat386-projects" # keep this the same or change it to the name of the repository 
 url: "https://esnt.github.io" #  change this to "https://<your-github-username>.github.io"
-image: "assets/images/autumn.jpg"
-#image: "https://source.unsplash.com/random/300x300/?moutain"
+image: "assets/images/image5.jpg"
 author: Your name
 copyright: ABCD # Your initials or what you want the copyright to be.  Leave empty for no copyright
 
