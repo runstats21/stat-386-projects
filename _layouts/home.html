@@ -7,7 +7,23 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  <img src="{{- site.image | relative_url -}}" alt="" class="featured-image-blog">
+<!-- The CSS grid that makes up the entirety of the hero image/banner image area -->
+<section class="top-banner-section">
+  <!-- The CSS grid area that displays the image (layer 1) -->
+  <div class="banner-image-div">
+    <img class="banner-image" src="{{- site.image | relative_url -}}" alt="Banner Image" />
+  </div>
+  <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
+  <div class="banner-overlay-div"></div>
+  <!-- The CSS grid area that displays the content (layer 3) -->
+  <div class="banner-text-div">
+    <span class="banner-text">
+      <p class="banner-h1-text">site.author</p>
+      <p class="banner-body-text">site.description</p>
+    </span>
+  </div>
+</section>
+  
   
   {{ content }}
 
