@@ -23,7 +23,7 @@ email: tylerw99@live.com # Add your email
 description: Real World Applications of Simple Statistical Methods
 baseurl: "/stat386-projects" # keep this the same or change it to the name of the repository 
 url: "https://runstats21.github.io" #  change this to "https://<your-github-username>.github.io"
-image: "assets/images/markus-gjengaar-i371H-yD5CE-unsplash.jpg"
+image: "assets/images/image5.jpg"
 author: Tyler Ward
 copyright: TWW # Your initials or what you want the copyright to be.  Leave empty for no copyright
 
