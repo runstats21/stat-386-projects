@@ -18,26 +18,27 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Real Life Statistics # Make a title for your blog
-email: tylerw99@live.com # Add your email 
-description: Real World Applications of Simple Statistical Methods
+title: Blog Title # Make a title for your blog
+email: author_email@email.com # Add your email 
+description: >- # this means to ignore newlines until "baseurl:"
+ Change the description so that it describes your blog
 baseurl: "/stat386-projects" # keep this the same or change it to the name of the repository 
-url: "https://runstats21.github.io" #  change this to "https://<your-github-username>.github.io"
+url: "https://esnt.github.io" #  change this to "https://<your-github-username>.github.io"
 image: "assets/images/image5.jpg"
-author: Tyler Ward
-copyright: TWW # Your initials or what you want the copyright to be.  Leave empty for no copyright
+author: Your name
+copyright: ABCD # Your initials or what you want the copyright to be.  Leave empty for no copyright
 
 # Social media users names.  Leave fields blank that you don't want displayed
-twitter_username: 
-github_username:  runstats21
-linkedin_username: https://www.linkedin.com/in/tyler-ward5/
+twitter_username: 386student
+github_username:  386student
+linkedin_username: 386student
 dribbble_username: 
-facebook_username:
+facebook_username: 386student
 flickr_username:
 instagram_username: 
 pinterest_username:
 youtube_username: 
-googleplus_username:
+googleplus_username: 386student
 
 
 # Build settings
