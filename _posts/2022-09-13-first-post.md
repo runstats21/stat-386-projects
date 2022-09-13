@@ -14,7 +14,7 @@ Think of trying to summit a large mountain. Now think of all the data you will w
 
 **How is this so?**
 
-Just as in this example, there are statistics all around us that summarize the information we seek: The elevation of Mt. Rainier, the optimal path to reach the summit from your current location, and how many feet you will gain per mile on your given path, all are statistics that help to summarize your climb of this mountain.
+As in this example, there are statistics all around us that summarize the information we seek: The elevation of Mt. Rainier, the optimal path to reach the summit from your current location, and how many feet you will gain per mile on your given path, all are statistics that help to summarize your climb of this mountain.
 
 > Collect Data, and form meaningful statistics, and you can better summit all the mountains in your life
 
