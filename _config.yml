@@ -20,7 +20,8 @@
 
 title: Real Life Statistics # Make a title for your blog
 email: tylerw99@live.com # Add your email 
-description: Real World Applications of Simple Statistical Methods
+description: >- # ignore new lines until base url
+Real World Applications of Simple Statistical Methods
 
 baseurl: "/stat386-projects" # keep this the same or change it to the name of the repository 
 url: "https://runstats21.github.io" #  change this to "https://<your-github-username>.github.io"
