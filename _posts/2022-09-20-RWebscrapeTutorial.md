@@ -16,15 +16,23 @@ image: /assets/images/rvest.png
 
 ### 1. Install and Load Needed Libraries
 
-`install.packages("tidyverse")\n library(tidyverse)`
+```
+install.packages("tidyverse")
+library(tidyverse)
+```
 
 OR
 
-`install.packages("rvest") \n library(rvest)`
+```
+install.packages("rvest")
+library(rvest)
+```
 
-*rvest* is already included within the tidyverse, but if you want to access the functions individually, you can load this library on its own.
+Note: *rvest* is already included within the tidyverse, but if you want to access the functions individually, you can load this library on its own.
 
-### 2. Inspect Website to Identify Desired URL and Data Tables(s)
+
+
+### 2. Indentify Needed HTML Code and URL
 
 
 ### 3. Scrape html_tables 
@@ -47,10 +55,9 @@ How?
 **map_dfr**(.x = <vector of urls>, .f = <function name>)
 
 example:
-`url = "sportsreference.com/cfb/leaders/rb/2021"`
-`map_dfr(url, import_position_data)`
+```
+url = "sportsreference.com/cfb/leaders/rb/2021"
+map_dfr(url, import_position_data)
+```
 
-
-Until Next Time,<br>
-*Tyler*
 
