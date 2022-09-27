@@ -53,7 +53,7 @@ College Football example:
 ```
 
 
-For a more in-depth description of web-page characteristics and HTML, see the article linked here: [Tutorial: Web Scraping in R with rvest](https://www.dataquest.io/blog/web-scraping-in-r-rvest/)
+For a more in-depth description of web-page characteristics and HTML, see the dataquest article linked here: [Tutorial: Web Scraping in R with rvest](https://www.dataquest.io/blog/web-scraping-in-r-rvest/)
 
 
 ### 3. Scrape html_tables 
