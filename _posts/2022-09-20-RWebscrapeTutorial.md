@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Webscraping Sports Reference with R"
+title:  "Webscraping Sports Reference with R in 5 easy steps"
 date:   2022-09-20
 author: Tyler Ward
 description: How to use the rvest library to collect data for all your favorite sports
