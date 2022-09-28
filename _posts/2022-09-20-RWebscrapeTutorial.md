@@ -65,7 +65,7 @@ For example, when inspecting the following [College Football 2021 Rushing Stats]
 The webpage in this example has only one table, so we can scrape this data table quite easily by telling R to get the "table" html element, using the function `html_element()`
  
 Format:
- **html_element**(<read in webpage html>, "<element to access>")
+ **html_element**(read-in webpage html, "element to access")
 
 Example:
  
@@ -114,7 +114,8 @@ example (using the function created in step 5 above):
 ```
 
 ### **Acknowledgements**
-Cover Image: [The Athlytics Blog](https://412sportsanalytics.wordpress.com/2016/11/21/is-nfl-catching-up-with-analytics/)
-Complete rvest documentation: https://www.rdocumentation.org/packages/rvest/versions/1.0.3
+ 
+* Cover Image: [The Athlytics Blog](https://412sportsanalytics.wordpress.com/2016/11/21/is-nfl-catching-up-with-analytics/)
+* Complete rvest documentation: https://www.rdocumentation.org/packages/rvest/versions/1.0.3
 
  
