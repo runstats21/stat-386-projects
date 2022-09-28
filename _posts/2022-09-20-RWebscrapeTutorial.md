@@ -38,7 +38,7 @@ For more information on the tidyverse and the pipe operator, give [tidyverse.org
 ### 2. Use Webpage URL to get Webpage HTML elements
 
 Format:
-**read_html**(<url of page you want to scrape>) 
+**read_html**(url of page you want to scrape) 
 
 College Football example:
 ```r
@@ -57,7 +57,9 @@ Before applying rvest functionality further, it is important to understand the f
 
 In order to find HTML structure of your webpage, using `Ctrl + Shift + C` (`Command + Shift + C` for Mac users)
 
-For example, when inspecting [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) webpage, we can find the table element, as shown in the screenshot below.
+For example, when inspecting the following [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) webpage, we can find the table element:
+<br>
+
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/112500643/192863594-de3548c5-09e8-49aa-b7fc-8f1555dd6433.png">
  
 The webpage in this example has only one table, so we can scrape this data table quite easily by telling R to get the "table" html element, using the function `html_element()`
@@ -66,14 +68,15 @@ Format:
  **html_element**(<read in webpage html>, "<element to access>")
 
 Example:
-```
+ 
+```r
  read_html(url) %>%
   html_element("table") %>%
   html_table()
  
 ```
 
-If a webpage has more than one table, simply apply the 'html_elements()` function in place of `html_element()`, which will import each of the desired tables as a list. You can then access your desired table by calling the corresponding list element. For example, if you want to get the first table from the webpage, use `.[[1]]`, as shown in the example below.
+If a webpage has more than one table, simply apply the `html_elements()` function in place of `html_element()`, which will import each of the desired tables as a list. You can then access your desired table by calling the corresponding list element. For example, if you want to get the first table from the webpage, use `.[[1]]`, as shown in the example below.
 
 ```r
  read_html(my_url) %>%
@@ -82,7 +85,7 @@ If a webpage has more than one table, simply apply the 'html_elements()` functio
   .[[1]] # get first table
 ```
 
-For a more in-depth description of web-page characteristics and HTML, see the dataquest article linked here: [Tutorial: Web Scraping in R with rvest](https://www.dataquest.io/blog/web-scraping-in-r-rvest/)
+For a more in-depth description of web-page characteristics and HTML, see the opening sections of the dataquest article linked here: [Tutorial: Web Scraping in R with rvest](https://www.dataquest.io/blog/web-scraping-in-r-rvest/)
 
 
 ### 3. Scrape html_tables 
