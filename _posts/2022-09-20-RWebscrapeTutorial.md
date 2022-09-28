@@ -4,10 +4,11 @@ title:  "Webscraping Sports Reference with R"
 date:   2022-09-20
 author: Tyler Ward
 description: How to use the rvest library to collect data for all your favorite sports
-image: /assets/images/rvest.png
+image: /assets/images/nfl_analytics.png
 ---
 
 # Webscraping Sports Reference with R in 5 easy steps
+### Always wanted to get years of sports data for an innovative sports statistics model? This tutorial is your place to begin 
 
 
 ![Cool Mountain Image Peaked](https://raw.githubusercontent.com/runstats21/stat-386-projects/main/assets/images/sean-martin-PgZ4WfREKZk-unsplash.jpg)
@@ -79,6 +80,9 @@ example:
 ```
 url = "sportsreference.com/cfb/leaders/rb/2021"
 map_dfr(url, import_position_data)
-```
 
-For more information on webscraping 
+```
+### Acknowledgements
+Cover Image: [The Athlytics Blog](https://412sportsanalytics.wordpress.com/2016/11/21/is-nfl-catching-up-with-analytics/)
+
+ 
