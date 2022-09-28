@@ -39,6 +39,7 @@ Before applying rvest functionality to scrape a webpage's data, you need to fami
 
 In order to find HTML structure of your webpage, using `Ctrl + Shift + C` (`Command + Shift + C` for Mac users)
 
+For example, when inspecting [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) webpage, we can find the table element, as shown in the screenshot below
 (Insert screen shot here)
 <img width="958" alt="image" src="https://user-images.githubusercontent.com/112500643/192651156-2932aa55-6304-4144-9d85-d93ae84c8434.png">
 
