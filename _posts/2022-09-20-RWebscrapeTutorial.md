@@ -10,8 +10,6 @@ image: /assets/images/nfl_analytics.png
 # Webscraping Sports Reference with R in 5 easy steps
 ### Always wanted to get years of sports data for an innovative sports statistics model? This tutorial is your place to begin 
 
-
-![Cool Mountain Image Peaked](https://raw.githubusercontent.com/runstats21/stat-386-projects/main/assets/images/sean-martin-PgZ4WfREKZk-unsplash.jpg)
 <br>
 
 Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from (college football) to (hockey) and from (baseball) to (soccer). This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into performance analysis, scouting and draft projections, and game win prediction (see examples [here](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [here](https://github.com/runstats21/rb-draft-model), and [here](https://github.com/gschwaeb/NHL_Game_Prediction))
