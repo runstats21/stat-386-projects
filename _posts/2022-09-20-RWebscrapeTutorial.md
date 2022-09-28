@@ -8,7 +8,7 @@ image: /assets/images/nfl-analytics.png
 ---
 
 # Webscraping Sports Reference with R in 5 easy steps
-### Always wanted to get years of sports data for an innovative sports statistics model? This tutorial is your place to begin 
+### Always wanted to get data about your favorite sport for an innovative statistical model? This tutorial is your place to begin 
 
 <br>
 
@@ -17,23 +17,31 @@ Up-to-date sports data can be found among the webpages of [sportsreference.com](
 
 ### 1. Install and Load Needed Libraries
 
-```
-install.packages("tidyverse")
-library(tidyverse)
-```
-
-OR
+In order 
 
 ```
 install.packages("rvest")
 library(rvest)
+
+install.packages("tidyverse")
+library(tidyverse) # gives access to pipe operator (%>%), which allows for organized application of functions sequentially within R
 ```
 
-Note: *rvest* is already included within the tidyverse, but if you want to access the functions individually, you can load this library on its own.
+For more information on the tidyverse and the pipe operator, give [tidyverse.org](https://www.tidyverse.org/) a visit.
 
+### 2. Use Webpage URL to get Webpage HTML elements
 
+Format:
+**read_html**(<url of page you want to scrape>) 
 
-### 2. Identify HTML characteristics of webpage
+College Football example:
+```r
+ my_url = "https://www.sports-reference.com/cfb/years/2021-rushing.html" # save
+
+ read_html(url)
+```
+
+### 3. Identify Webpage Characteristics and Scrape HTML Table(s)
 
 Before applying rvest functionality, it is important to understand the format of the webpage which has the data you want to scrape. Specifically:
 
@@ -50,10 +58,12 @@ For example, when inspecting [College Football 2021 Rushing Stats](https://www.s
 
 Format:
 
-
-College Football example:
+Example:
 ```
-
+ pos_tbl <- read_html(url) %>%
+  html_node("table") %>%
+  html_table()
+ 
 ```
 
 
@@ -79,10 +89,10 @@ How?
 
 **map_dfr**(.x = <vector of urls>, .f = <function name>)
 
-example:
+example (using the function created in step 5 above):
 ```
-url = "sportsreference.com/cfb/leaders/rb/2021"
-map_dfr(url, import_position_data)
+ url = "sportsreference.com/cfb/leaders/rb/2021"
+ map_dfr(url, import_position_data)
 ```
 
 ### **Acknowledgements**
