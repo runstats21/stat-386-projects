@@ -35,7 +35,11 @@ Note: *rvest* is already included within the tidyverse, but if you want to acces
 
 ### 2. Identify HTML characteristics of webpage
 
-Before applying rvest functionality to scrape a webpage's data, you need to familiarize yourself
+Before applying rvest functionality, it is important to understand the format of the webpage which has the data you want to scrape. Specifically:
+
+* Is the data already grouped into table elements?
+* How many tables are there on the webpage?
+* Which table(s) on the webpage do you want to scrape?
 
 In order to find HTML structure of your webpage, using `Ctrl + Shift + C` (`Command + Shift + C` for Mac users)
 
