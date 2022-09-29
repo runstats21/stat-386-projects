@@ -67,10 +67,10 @@ You can identify these characteristics with a quick scroll through of your webpa
 
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/112500643/192863594-de3548c5-09e8-49aa-b7fc-8f1555dd6433.png">
  
-You can then scrape this data table by telling R to get the "table" html element from your read-in html, and then convert it into an R data frame. This can be done by simplying piping your read-in html into the functions `html_element()`, asking for the table element in quotation marks, then piping that into the `html_table()` function.
+You can then scrape and store this data table by telling R to get the "table" html element from your read-in html, and then convert it into an R data frame. This can be done by simplying piping your read-in html into the functions `html_element()`, asking for the table element in quotation marks, then piping that into the `html_table()` function.
  
 ```r
- read_html(url) %>% # read html from my_url
+data_tbl <- read_html(url) %>% # read html from my_url
   html_element("table") %>% # get first table element
   html_table() # convert table to an R data frame (tibble)
 ```
@@ -78,7 +78,7 @@ You can then scrape this data table by telling R to get the "table" html element
 *Note:* If a webpage has more than one table, simply apply the `html_elements()` function in place of `html_element()`, which will import each of the desired tables as a list. You can then access your desired table by entering the index corresponding to the order of tables on the web page from top down.
 
 ```r
- read_html(my_url) %>%
+ data_tbl <- read_html(my_url) %>%
   html_elements("table") %>% # get all table elements on webpage and combine them into a list
   html_table() %>%
   .[[1]] # get first table
@@ -88,9 +88,27 @@ For a more in-depth description of web-page characteristics and HTML, see the op
 
 ### 4. Clean dataset header
 
-Two major issues often arise when scraping sports reference web pages that can be 
+Two major issues often arise when scraping sports reference web pages, as shown in the screenshots below:
 
+**A**
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/112500643/192927742-5b81ff1f-d8ad-4c17-874e-88db707d51f7.png">
+
+![image](https://user-images.githubusercontent.com/112500643/192931190-9101dfca-8d8c-4432-a2f7-da0dbdae6ffe.png)
+
+
+**B**
+<img width="589" alt="image" src="https://user-images.githubusercontent.com/112500643/192930202-b1e73ea4-55c6-4d83-819e-0fc74639739a.png">
+
+
+A) R confuses an extra header line as the true column names, and stores the true column names as the first row in the dataset
+B) Sports Reference pastes a reminder of the column names after every 20 rows in the dataset, which creates useless observations within the dataset
+
+
+These problems can be fixed in three simple lines of code:
+
+1) Use the `paste0()` and `colnames()` functions to paste the current column names together with the current first row, and store this vector of names as the new table column names.
+2) Use the `gsub()` and `colnames()` functions to find and replace any unecessary periods in the columns that did not have any informating in the extra header line (usually the first 5 columns).
+3) Use the `grepl()` function in a slice of the data_tbl along with the `!` "except" wildcard to only select observations that are not repeated header rows. Store this as a new table if desired.
 
 
 (example)
@@ -99,7 +117,7 @@ Two major issues often arise when scraping sports reference web pages that can b
 # combine first row with second level of header above with period in between as new column names
 colnames(data_tbl) = paste0(colnames(data_tbl), ".", data_tbl[1,]) # paste "original column name.value in first row" together as new column name
 
-# remove periods from first few columns
+# remove periods from first few columns, which did not have a second, upper level heading
 colnames(data_tbl)[1:5] = gsub("\\.", "", colnames(data_tbl[1:5]))  # find and replace all periods in first 5 columns with nothing (i.e., "")
 
 # remove unneeded repeated header rows
@@ -109,11 +127,19 @@ data_tbl_clean = data_tbl[!grepl('Rk', data_tbl$Rk), ]
 
 
 
-### 5. Compile commands as single function for ease of use // 
+### 5. Compile commands as single function for ease of use // Convert columns to correct data type to prepare for analysis
+
+### Complete Code for Webscraping Sports Reference in R
+
+```r
+
+```
 
 
-### *Bonus Step*: Read in data tables from multiple years/sources and bind theme together using purrr library
+### *Bonus Step*: Store webscraping commands as a function for importing from multiple data sources at once 
 
+
+... and bind them together using purrr library
 After you have created a function, you can use map_dfr() (functionality from the purrr library) to apply the same function to as many urls as possible, and then row bind the output into one data frame.
  
 How?
