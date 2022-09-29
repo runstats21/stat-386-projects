@@ -76,18 +76,22 @@ For a more in-depth description of web-page characteristics and HTML, see the op
 
 Two major issues often arise when scraping sports reference web pages, as shown in the screenshots below:
 
-**A** <br>
+**A)** 
+<br> 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/112500643/192927742-5b81ff1f-d8ad-4c17-874e-88db707d51f7.png">
 
 ![image](https://user-images.githubusercontent.com/112500643/192931190-9101dfca-8d8c-4432-a2f7-da0dbdae6ffe.png)
 
+<br>
 
-**B** <br>
+**B)** 
+<br>
+
 <img width="589" alt="image" src="https://user-images.githubusercontent.com/112500643/192930202-b1e73ea4-55c6-4d83-819e-0fc74639739a.png">
 
-
-**A)** R confuses an extra header line as the true column names, and stores the true column names as the first row in the dataset <br>
-**B)** Sports Reference pastes a reminder of the column names after every 20 rows in the dataset, which creates useless observations within the dataset <br>
+<br> 
+**A)** R confuses an extra header line as the true column names, and stores the true column names as the first row in the dataset. <br>
+**B)** Sports Reference pastes a reminder of the column names after every 20 rows in the dataset, which creates useless observations within the dataset. <br>
 
 
 These problems can be fixed in three simple lines of code:
