@@ -90,13 +90,13 @@ For a more in-depth description of web-page characteristics and HTML, see the op
 
 Two major issues often arise when scraping sports reference web pages, as shown in the screenshots below:
 
-**A**
+**A** <br>
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/112500643/192927742-5b81ff1f-d8ad-4c17-874e-88db707d51f7.png">
 
 ![image](https://user-images.githubusercontent.com/112500643/192931190-9101dfca-8d8c-4432-a2f7-da0dbdae6ffe.png)
 
 
-**B**
+**B** <br>
 <img width="589" alt="image" src="https://user-images.githubusercontent.com/112500643/192930202-b1e73ea4-55c6-4d83-819e-0fc74639739a.png">
 
 
@@ -108,10 +108,7 @@ These problems can be fixed in three simple lines of code:
 
 1) Use the `paste0()` and `colnames()` functions to paste the current column names together with the current first row, and store this vector of names as the new table column names.
 2) Use the `gsub()` and `colnames()` functions to find and replace any unecessary periods in the columns that did not have any informating in the extra header line (usually the first 5 columns).
-3) Use the `grepl()` function in a slice of the data_tbl along with the `!` "except" wildcard to only select observations that are not repeated header rows. Store this as a new table if desired.
-
-
-(example)
+3) Use the `grepl()` function in a slice of the data_tbl along with the `!` "except" wildcard to only select observations that do not include header information. This can be found by searching for observations with the occurence of a column name in a given column, such as finding "Rk" in the `Rk` column.
 
 ```r
 # combine first row with second level of header above with period in between as new column names
@@ -121,7 +118,7 @@ colnames(data_tbl) = paste0(colnames(data_tbl), ".", data_tbl[1,]) # paste "orig
 colnames(data_tbl)[1:5] = gsub("\\.", "", colnames(data_tbl[1:5]))  # find and replace all periods in first 5 columns with nothing (i.e., "")
 
 # remove unneeded repeated header rows
-data_tbl_clean = data_tbl[!grepl('Rk', data_tbl$Rk), ] 
+data_tbl_clean = data_tbl[!grepl('Rk', data_tbl$Rk), ] # search for and do not include observations with "Rk" in the Rk column
 ```
 
 
