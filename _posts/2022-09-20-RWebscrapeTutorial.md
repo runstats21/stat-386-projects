@@ -100,8 +100,8 @@ Two major issues often arise when scraping sports reference web pages, as shown 
 <img width="589" alt="image" src="https://user-images.githubusercontent.com/112500643/192930202-b1e73ea4-55c6-4d83-819e-0fc74639739a.png">
 
 
-**A**: R confuses an extra header line as the true column names, and stores the true column names as the first row in the dataset <br>
-**B** Sports Reference pastes a reminder of the column names after every 20 rows in the dataset, which creates useless observations within the dataset <br>
+**A)** R confuses an extra header line as the true column names, and stores the true column names as the first row in the dataset <br>
+**B)** Sports Reference pastes a reminder of the column names after every 20 rows in the dataset, which creates useless observations within the dataset <br>
 
 
 These problems can be fixed in three simple lines of code:
