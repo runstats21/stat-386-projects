@@ -12,9 +12,14 @@ image: /assets/images/nfl-analytics.png
 
 <br>
 
-Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from (college football) to (hockey) and from (baseball) to (soccer). This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into performance analysis, scouting and draft projections, and game win prediction (see examples [here](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [here](https://github.com/runstats21/rb-draft-model), and [here](https://github.com/gschwaeb/NHL_Game_Prediction)).
+Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from [college football] to [hockey], to [baseball] and [soccer]. This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into performance analysis, scouting and draft projections, and game win prediction (see examples [here](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [here](https://github.com/runstats21/rb-draft-model), and [here](https://github.com/gschwaeb/NHL_Game_Prediction)).
 
-This tutorial explains how to webscrape data from a sports reference web page in 5 easy steps, along with a bonus step on how to scrape and combine data from multiple web pages into one data frame.
+This tutorial explains how to webscrape data from a sports reference web page in 5 easy steps, along with a bonus step on how to scrape and combine data from multiple web pages into one data frame. An example code chunk for scraping college football rushing data will be included with each step, with the full code included at end of this post.
+
+*TO possible do*! :
+- change to "Step 1, Step 2, etc.
+- add links for pages for each sport
+- take out "example"
 
 ### 1. Install and Load Rvest and Tidyverse packages
 
@@ -38,7 +43,6 @@ For more information on the tidyverse and the pipe operator, give [tidyverse.org
 ### 2. Use Webpage URL to get HTML elements
 
 After selecting a webpage you want to scrape, save the url as a string object, and use the function `read_html` to read the html from the webpage. You can also access the full html of a web page by using the command `Ctrl + Shift + C` (`Command + Shift + C` for Mac users) while in a web browser.
-Below is an example use case of 
 
 Format:
 **read_html**(url of page you want to scrape) 
@@ -58,28 +62,20 @@ Before applying rvest functionality further, it is important to understand the f
 * How many tables are there on the webpage?
 * Which table(s) on the webpage do you want to scrape?
 
-You can identify these characteristcis with a quick scroll through of your webpage, along with inspecting the page's HTML structure using `Ctrl + Shift + C` (`Command + Shift + C` for Mac users). Once the HTML structure side bar is open
-
-For example, when inspecting the following [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) webpage, we can find the table element:
+You can identify these characteristics with a quick scroll through of your webpage, along with a `right click + Inspect`. This will open the HTML elements side bar, where you should look for for an element labeled `<table>`. For example, when inspecting the following [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) webpage, we can find the table element:
 <br>
 
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/112500643/192863594-de3548c5-09e8-49aa-b7fc-8f1555dd6433.png">
  
-The webpage in this example has only one table, so we can scrape this data table quite easily by telling R to get the "table" html element, using the function `html_element()`
- 
-Format:
- **html_element**(read-in webpage html, "element to access")
-
-Example:
+You can then scrape this data table by telling R to get the "table" html element from your read-in html, and then convert it into an R data frame. This can be done by simplying piping your read-in html into the functions `html_element()`, asking for the table element in quotation marks, then piping that into the `html_table()` function.
  
 ```r
- read_html(url) %>%
-  html_element("table") %>%
-  html_table()
- 
+ read_html(url) %>% # read html from my_url
+  html_element("table") %>% # get first table element
+  html_table() # convert table to an R data frame (tibble)
 ```
 
-If a webpage has more than one table, simply apply the `html_elements()` function in place of `html_element()`, which will import each of the desired tables as a list. You can then access your desired table by calling the corresponding list element. For example, if you want to get the first table from the webpage, use `.[[1]]`, as shown in the example below.
+*Note:* If a webpage has more than one table, simply apply the `html_elements()` function in place of `html_element()`, which will import each of the desired tables as a list. You can then access your desired table by entering the index corresponding to the order of tables on the web page from top down.
 
 ```r
  read_html(my_url) %>%
@@ -90,14 +86,30 @@ If a webpage has more than one table, simply apply the `html_elements()` functio
 
 For a more in-depth description of web-page characteristics and HTML, see the opening sections of the dataquest article linked here: [Tutorial: Web Scraping in R with rvest](https://www.dataquest.io/blog/web-scraping-in-r-rvest/)
 
+### 4. Clean dataset header
 
-### 3. Scrape html_tables 
+Two major issues often arise when scraping sports reference web pages that can be 
+
+<img width="609" alt="image" src="https://user-images.githubusercontent.com/112500643/192926838-8829d286-6170-4bd9-9f69-683ca7a62d87.png">
 
 
-### 4. Remove uneeded header rows
+(example)
+
+```r
+# combine first row with second level of header above with period in between as new column names
+colnames(data_tbl) = paste0(colnames(data_tbl), ".", data_tbl[1,]) # paste "original column name.value in first row" together as new column name
+
+# remove periods from first few columns
+colnames(data_tbl)[1:5] = gsub("\\.", "", colnames(data_tbl[1:5]))  # find and replace all periods in first 5 columns with nothing (i.e., "")
+
+# remove unneeded repeated header rows
+data_tbl_clean = data_tbl[!grepl('Rk', data_tbl$Rk), ] 
+```
 
 
-### 5. Compile commands as single function for easy use on other pages
+
+
+### 5. Compile commands as single function for ease of use // 
 
 
 ### *Bonus Step*: Read in data tables from multiple years/sources and bind theme together using purrr library
