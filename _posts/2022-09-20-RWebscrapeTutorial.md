@@ -13,7 +13,7 @@ image: /assets/images/nfl-analytics.png
 
 Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from [college football](https://www.sports-reference.com/cfb/) to [hockey](https://www.hockey-reference.com/), to [baseball](https://www.baseball-reference.com/) and [soccer](https://fbref.com/en/). This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into performance analysis, scouting and draft projections, and game win prediction (see examples [here](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [here](https://github.com/runstats21/rb-draft-model), and [here](https://github.com/gschwaeb/NHL_Game_Prediction)).
 
-This tutorial explains how to webscrape data from a sports reference web page in 5 easy steps, along with a bonus step on how to scrape and combine data from multiple web pages into one data frame. An example code chunk for scraping college football rushing data will be included with each step, with the full code included at end of this post.
+This tutorial explains how to webscrape data from a sports reference web page in 5 easy steps. Example code chunks for scraping college football rushing data are included with each step, with the full example code contained at end of this post.
 
 ## 1. Install and Load Rvest and Tidyverse packages
 
@@ -122,6 +122,13 @@ Lastly, due to the header issues presented in step 4, the web scraped data will 
 # Prepare for analysis
 data_tbl_clean[, -(2:4)]= sapply(data_tbl_clean[, -(2:4)], as.numeric) # ensure revelant continuous variables are interpreted as numeric variables
 ```
+
+## Conclusion
+
+You now have the tools to get a plethora of sports data in practically the blink of eye with R. Now it's your turn to try this out for yourself! Once you do, be sure to come back and comment what datasets you were able to create and what analysis you were able to perform with the skills outlined here and in other referenced sources.
+
+<br>
+
 ## Complete Code for Webscraping Sports Reference in R
 
 ```r
@@ -154,12 +161,6 @@ data_tbl_clean[, -(2:4)]= sapply(data_tbl_clean[, -(2:4)], as.numeric) # ensure 
 # cleaned, scraped data
 data_tbl_clean
 ```
-
-## Conclusion
-
-You now have the tools to get a plethora of sports data in practically the blink of eye with R. Now it's your turn to try this out for yourself! Once you do, be sure to come back and comment what datasets you were able to create and what analysis you were able to perform with the skills outlined here and in other referenced sources.
-
-<br>
 
 ### **Acknowledgements**
  
