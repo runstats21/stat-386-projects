@@ -7,7 +7,7 @@ description: How to use the rvest library to collect data for all your favorite 
 image: /assets/images/nfl-analytics.png
 ---
 
-### Always wanted to get data about your favorite sport for an innovative statistical model? This tutorial is your place to begin 
+## Always wanted to get data about your favorite sport for an innovative statistical model? This tutorial is your place to begin 
 
 <br>
 
@@ -15,7 +15,7 @@ Up-to-date sports data can be found among the webpages of [sportsreference.com](
 
 This tutorial explains how to webscrape data from a sports reference web page in 5 easy steps, along with a bonus step on how to scrape and combine data from multiple web pages into one data frame. An example code chunk for scraping college football rushing data will be included with each step, with the full code included at end of this post.
 
-### 1. Install and Load Rvest and Tidyverse packages
+## 1. Install and Load Rvest and Tidyverse packages
 
 In order to scrape data from a webpage in R, you will need to install and load the `rvest` package. Additionally, this tutorial uses a pipe operator to steamline the scraping process, which can be accessed by installing and loading the `tidyverse` library. If you already have the rvest and tidyverse packages installed, you do not need to install them again. 
 
@@ -34,7 +34,7 @@ For more information on the tidyverse and the pipe operator, give [tidyverse.org
 
 For more information on the tidyverse and the pipe operator, give [tidyverse.org](https://www.tidyverse.org/) a visit.
 
-### 2. Use Webpage URL to get HTML elements
+## 2. Use Webpage URL to get HTML elements
 
 After selecting a webpage you want to scrape, save the url as a string object, and use the function `read_html` to read the html from the webpage. You can also access the full html of a web page by using the command `Ctrl + Shift + C` (`Command + Shift + C` for Mac users) while in a web browser.
 
@@ -45,7 +45,7 @@ College Football example:
  read_html(my_url) # read html from my_url
 ```
 
-### 3. Identify Webpage Characteristics and Scrape HTML Table(s)
+## 3. Identify Webpage Characteristics and Scrape HTML Table(s)
 
 Before applying rvest functionality further, it is important to understand the format of the webpage which has the data you want to scrape. Specifically:
 
@@ -77,7 +77,7 @@ data_tbl <- read_html(url) %>% # read html from my_url
 
 For a more in-depth description of web-page characteristics and HTML, see the opening sections of the dataquest article linked here: [Tutorial: Web Scraping in R with rvest](https://www.dataquest.io/blog/web-scraping-in-r-rvest/)
 
-### 4. Clean dataset header
+## 4. Clean dataset header
 
 Two major issues often arise when scraping sports reference web pages, as shown in the screenshots below:
 
@@ -112,7 +112,7 @@ colnames(data_tbl)[1:5] = gsub("\\.", "", colnames(data_tbl[1:5]))  # find and r
 data_tbl_clean = data_tbl[!grepl('Rk', data_tbl$Rk), ] # search for and do not include observations with "Rk" in the Rk column
 ```
 
-### 5. Convert columns to correct data type to prepare for analysis
+## 5. Convert columns to correct data type to prepare for analysis
 
 Lastly, due to the header issues presented in step 4, the web scraped data will likely incorrectly consider all variables as character variables. This can be amended by applying the `as.numeric()` function to relevant numeric columns using the `sapply()` function. 
 
@@ -122,8 +122,7 @@ Lastly, due to the header issues presented in step 4, the web scraped data will 
 # Prepare for analysis
 data_tbl_clean[, -(2:4)]= sapply(data_tbl_clean[, -(2:4)], as.numeric) # ensure revelant continuous variables are interpreted as numeric variables
 ```
-
-### Complete Code for Webscraping Sports Reference in R
+## Complete Code for Webscraping Sports Reference in R
 
 ```r
 # import libraries
@@ -155,6 +154,12 @@ data_tbl_clean[, -(2:4)]= sapply(data_tbl_clean[, -(2:4)], as.numeric) # ensure 
 # cleaned, scraped data
 data_tbl_clean
 ```
+
+## Conclusion
+
+You now have the tools to get a plethora of sports data in practically the blink of eye with R. Now it's your turn to try this out for yourself! Once you do, be sure to come back and comment what datasets you were able to create and what analysis you were able to perform with the skills outlined here and in other referenced sources.
+
+<br>
 
 ### **Acknowledgements**
  
