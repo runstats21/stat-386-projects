@@ -7,11 +7,7 @@ description: How to use the rvest library to collect data for all your favorite 
 image: /assets/images/nfl-analytics.png
 ---
 
-## Always wanted to get data about your favorite sport for an innovative statistical model? This tutorial is your place to begin 
-
-<br>
-
-Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from [college football](https://www.sports-reference.com/cfb/) to [hockey](https://www.hockey-reference.com/), to [baseball](https://www.baseball-reference.com/) and [soccer](https://fbref.com/en/). This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into performance analysis, scouting and draft projections, and game win prediction (see examples [here](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [here](https://github.com/runstats21/rb-draft-model), and [here](https://github.com/gschwaeb/NHL_Game_Prediction)).
+Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from [college football](https://www.sports-reference.com/cfb/) to [hockey](https://www.hockey-reference.com/), to [baseball](https://www.baseball-reference.com/) and [soccer](https://fbref.com/en/). This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into [performance analysis](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [scouting and draft projections](https://github.com/runstats21/rb-draft-model), and [game outcome prediction](https://github.com/gschwaeb/NHL_Game_Prediction).
 
 This tutorial explains how to webscrape data from a sports reference web page in 5 easy steps. Example code chunks for scraping college football rushing data are included with each step, with the full example code contained at end of this post.
 
