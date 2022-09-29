@@ -25,7 +25,7 @@ library(rvest)
 library(tidyverse)
 ```
 
-A tutorial on webscraping in R without using the tidyverse can be found [here](https://www.geeksforgeeks.org/web-scraping-using-r-language/). <br>
+A tutorial on webscraping in R *without* using the tidyverse can be found [here](https://www.geeksforgeeks.org/web-scraping-using-r-language/). <br>
 For more information on the tidyverse, give [tidyverse.org](https://www.tidyverse.org/) a visit.
 
 
