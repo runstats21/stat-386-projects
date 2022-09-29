@@ -167,6 +167,6 @@ data_tbl_clean
 ### **Acknowledgements**
  
 * Cover Image: [The Athlytics Blog](https://412sportsanalytics.wordpress.com/2016/11/21/is-nfl-catching-up-with-analytics/)
-* Complete rvest documentation: https://www.rdocumentation.org/packages/rvest/versions/1.0.3
+* Complete rvest documentation: [https://www.rdocumentation.org/packages/rvest/versions/1.0.3](https://www.rdocumentation.org/packages/rvest/versions/1.0.3)
 
  
