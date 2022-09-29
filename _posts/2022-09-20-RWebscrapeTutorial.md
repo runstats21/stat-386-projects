@@ -35,7 +35,10 @@ For more information on the tidyverse and the pipe operator, give [tidyverse.org
 
 For more information on the tidyverse and the pipe operator, give [tidyverse.org](https://www.tidyverse.org/) a visit.
 
-### 2. Use Webpage URL to get Webpage HTML elements
+### 2. Use Webpage URL to get HTML elements
+
+After selecting a webpage you want to scrape, save the url as a string object, and use the function `read_html` to read the html from the webpage. You can also access the full html of a web page by using the command `Ctrl + Shift + C` (`Command + Shift + C` for Mac users) while in a web browser.
+Below is an example use case of 
 
 Format:
 **read_html**(url of page you want to scrape) 
@@ -55,7 +58,7 @@ Before applying rvest functionality further, it is important to understand the f
 * How many tables are there on the webpage?
 * Which table(s) on the webpage do you want to scrape?
 
-In order to find HTML structure of your webpage, using `Ctrl + Shift + C` (`Command + Shift + C` for Mac users)
+You can identify these characteristcis with a quick scroll through of your webpage, along with inspecting the page's HTML structure using `Ctrl + Shift + C` (`Command + Shift + C` for Mac users). Once the HTML structure side bar is open
 
 For example, when inspecting the following [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) webpage, we can find the table element:
 <br>
