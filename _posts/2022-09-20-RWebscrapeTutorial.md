@@ -7,7 +7,6 @@ description: How to use the rvest library to collect data for all your favorite 
 image: /assets/images/nfl-analytics.png
 ---
 
-# Webscraping Sports Reference with R in 5 easy steps
 ### Always wanted to get data about your favorite sport for an innovative statistical model? This tutorial is your place to begin 
 
 <br>
