@@ -12,14 +12,13 @@ image: /assets/images/nfl-analytics.png
 
 <br>
 
-Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from [college football] to [hockey], to [baseball] and [soccer]. This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into performance analysis, scouting and draft projections, and game win prediction (see examples [here](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [here](https://github.com/runstats21/rb-draft-model), and [here](https://github.com/gschwaeb/NHL_Game_Prediction)).
+Up-to-date sports data can be found among the webpages of [sportsreference.com](https://www.sports-reference.com/) for several of the worlds most popular sports, from [college football]() to [hockey](), to [baseball]() and [soccer](). This data, once accessed, can be used to build a variety of fascinating machine learning models to provide insights into performance analysis, scouting and draft projections, and game win prediction (see examples [here](http://vision.lmi.link/docs/janezp/Pers-ereview2000.pdf), [here](https://github.com/runstats21/rb-draft-model), and [here](https://github.com/gschwaeb/NHL_Game_Prediction)).
 
 This tutorial explains how to webscrape data from a sports reference web page in 5 easy steps, along with a bonus step on how to scrape and combine data from multiple web pages into one data frame. An example code chunk for scraping college football rushing data will be included with each step, with the full code included at end of this post.
 
-*TO possible do*! :
+*TO possibly do*! :
 - change to "Step 1, Step 2, etc.
 - add links for pages for each sport
-- take out "example"
 
 ### 1. Install and Load Rvest and Tidyverse packages
 
@@ -43,9 +42,6 @@ For more information on the tidyverse and the pipe operator, give [tidyverse.org
 ### 2. Use Webpage URL to get HTML elements
 
 After selecting a webpage you want to scrape, save the url as a string object, and use the function `read_html` to read the html from the webpage. You can also access the full html of a web page by using the command `Ctrl + Shift + C` (`Command + Shift + C` for Mac users) while in a web browser.
-
-Format:
-**read_html**(url of page you want to scrape) 
 
 College Football example:
 ```r
@@ -121,34 +117,48 @@ colnames(data_tbl)[1:5] = gsub("\\.", "", colnames(data_tbl[1:5]))  # find and r
 data_tbl_clean = data_tbl[!grepl('Rk', data_tbl$Rk), ] # search for and do not include observations with "Rk" in the Rk column
 ```
 
+### 5. Convert columns to correct data type to prepare for analysis
 
+Lastly, due to the header issues presented in step 4, the web scraped data will likely incorrectly consider all variables as character variables. This can be amended by applying the `as.numeric()` function to relevant numeric columns using the `sapply()` function. 
 
+*Note:* For sports data, it will often be most efficient to apply as.numeric to all columns *except* those that should remain non-numeric, such as in the example below, which makes all columns numeric except for columns two through four.
 
-### 5. Compile commands as single function for ease of use // Convert columns to correct data type to prepare for analysis
+```r
+# Prepare for analysis
+data_tbl_clean[, -(2:4)]= sapply(data_tbl_clean[, -(2:4)], as.numeric) # ensure revelant continuous variables are interpreted as numeric variables
+```
 
 ### Complete Code for Webscraping Sports Reference in R
 
 ```r
+# import libraries
+library(tidyverse)
+library(rvest)
 
-```
+# save url
+my_url = "https://www.sports-reference.com/cfb/years/2021-rushing.html" 
+
+# webscraped tbl, saved as object
+data_tbl <- read_html(my_url) %>% # read html elements
+  html_element("table") %>% # select table element
+  html_table() # convert to R data frame
 
 
-### *Bonus Step*: Store webscraping commands as a function for importing from multiple data sources at once 
+# CLEAN TABLE
+# take first row and combine with second level of header above with period in between words
+colnames(data_tbl) = paste0(colnames(data_tbl), ".", data_tbl[1,]) 
 
+# remove periods from first few columns
+colnames(data_tbl)[1:5] = gsub("\\.", "", colnames(data_tbl[1:5]))
 
-... and bind them together using purrr library
-After you have created a function, you can use map_dfr() (functionality from the purrr library) to apply the same function to as many urls as possible, and then row bind the output into one data frame.
- 
-How?
-* First, Vectorize the Urls
-* Then, Use purrr::map_dfr
+# remove unneeded repeated header rows
+data_tbl_clean = data_tbl[!grepl('Rk', data_tbl$Rk), ]  
 
-**map_dfr**(.x = <vector of urls>, .f = <function name>)
+# Prepare for analysis
+data_tbl_clean[, -(2:4)]= sapply(data_tbl_clean[, -(2:4)], as.numeric) # ensure revelant continuous variables are interpreted as numeric variables
 
-example (using the function created in step 5 above):
-```
- url = "sportsreference.com/cfb/leaders/rb/2021"
- map_dfr(url, import_position_data)
+# cleaned, scraped data
+data_tbl_clean
 ```
 
 ### **Acknowledgements**
