@@ -13,7 +13,7 @@ This tutorial explains how to webscrape data from a sports reference web page in
 
 ## 1. Install and Load Rvest and Tidyverse packages
 
-In order to scrape data from a webpage in R, you will need to install and load the `rvest` package. Additionally, this tutorial uses a pipe operator to steamline the scraping process, which can be accessed by installing and loading the `tidyverse` library. If you already have the rvest and tidyverse packages installed, you do not need to install them again. 
+In order to scrape data from a web page in R, you will need to install and load the `rvest` package. Additionally, this tutorial uses a pipe operator to steamline the scraping process, which can be accessed by installing and loading the `tidyverse` library. If you already have the rvest and tidyverse packages installed, you do not need to install them again. 
 
 ```r
 # install packages, as applicable
@@ -25,14 +25,13 @@ library(rvest)
 library(tidyverse)
 ```
 
-A tutorial on webscraping in R without using the tidyverse can be found [here](https://www.geeksforgeeks.org/web-scraping-using-r-language/).
-For more information on the tidyverse and the pipe operator, give [tidyverse.org](https://www.tidyverse.org/) a visit.
+A tutorial on webscraping in R without using the tidyverse can be found [here](https://www.geeksforgeeks.org/web-scraping-using-r-language/). <br>
+For more information on the tidyverse, give [tidyverse.org](https://www.tidyverse.org/) a visit.
 
-For more information on the tidyverse and the pipe operator, give [tidyverse.org](https://www.tidyverse.org/) a visit.
 
-## 2. Use Webpage URL to get HTML elements
+## 2. Use Web Page URL to get HTML elements
 
-After selecting a webpage you want to scrape, save the url as a string object, and use the function `read_html` to read the html from the webpage. You can also access the full html of a web page by using the command `Ctrl + Shift + C` (`Command + Shift + C` for Mac users) while in a web browser.
+After selecting a web page you want to scrape, save the url as a string object, and use the function `read_html` to read the html from the web page. You can also access the full html of a web page by using the command `Ctrl + Shift + C` (`Command + Shift + C` for Mac users) while in a web browser.
 
 College Football example:
 ```r
@@ -41,15 +40,15 @@ College Football example:
  read_html(my_url) # read html from my_url
 ```
 
-## 3. Identify Webpage Characteristics and Scrape HTML Table(s)
+## 3. Identify Web Page Characteristics and Scrape HTML Table(s)
 
-Before applying rvest functionality further, it is important to understand the format of the webpage which has the data you want to scrape. Specifically:
+Before applying rvest functionality further, it is important to understand the format of the web page which has the data you want to scrape. Specifically:
 
 * Is the data already grouped into table elements?
-* How many tables are there on the webpage?
-* Which table(s) on the webpage do you want to scrape?
+* How many tables are there on the web page?
+* Which table(s) on the web page do you want to scrape?
 
-You can identify these characteristics with a quick scroll through of your webpage, along with a `right click + Inspect`. This will open the HTML elements side bar, where you should look for for an element labeled `<table>`. For example, when inspecting the following [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) webpage, we can find the table element:
+You can identify these characteristics with a quick scroll through of your web page, along with a `right click + Inspect`. This will open the HTML elements side bar, where you should look for for an element labeled `<table>`. For example, when inspecting the following [College Football 2021 Rushing Stats](https://www.sports-reference.com/cfb/years/2021-rushing.html) web page, we can find the table element:
 <br>
 
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/112500643/192863594-de3548c5-09e8-49aa-b7fc-8f1555dd6433.png">
@@ -62,11 +61,11 @@ data_tbl <- read_html(url) %>% # read html from my_url
   html_table() # convert table to an R data frame (tibble)
 ```
 
-*Note:* If a webpage has more than one table, simply apply the `html_elements()` function in place of `html_element()`, which will import each of the desired tables as a list. You can then access your desired table by entering the index corresponding to the order of tables on the web page from top down.
+*Note:* If a web page has more than one table, simply apply the `html_elements()` function in place of `html_element()`, which will import each of the desired tables as a list. You can then access your desired table by entering the index corresponding to the order of tables on the web page from top down.
 
 ```r
  data_tbl <- read_html(my_url) %>%
-  html_elements("table") %>% # get all table elements on webpage and combine them into a list
+  html_elements("table") %>% # get all table elements on web page and combine them into a list
   html_table() %>%
   .[[1]] # get first table
 ```
