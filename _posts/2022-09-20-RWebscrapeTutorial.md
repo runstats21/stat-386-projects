@@ -90,7 +90,7 @@ For a more in-depth description of web-page characteristics and HTML, see the op
 
 Two major issues often arise when scraping sports reference web pages that can be 
 
-<img width="609" alt="image" src="https://user-images.githubusercontent.com/112500643/192926838-8829d286-6170-4bd9-9f69-683ca7a62d87.png">
+<img width="588" alt="image" src="https://user-images.githubusercontent.com/112500643/192927742-5b81ff1f-d8ad-4c17-874e-88db707d51f7.png">
 
 
 (example)
