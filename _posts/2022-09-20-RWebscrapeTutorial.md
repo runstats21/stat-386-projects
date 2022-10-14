@@ -76,7 +76,8 @@ For a more in-depth description of web-page characteristics and HTML, see the op
 
 Two major issues often arise when scraping sports reference web pages, as shown in the screenshots below:
 
-**A) R confuses an extra header line as the true column names, and stores the true column names as the first row in the dataset. **
+**A) R confuses an extra header line as the true column names, and stores the true column names as the first row in the dataset.**
+
 <br>
 <br> 
 <img width="588" alt="image" src="https://user-images.githubusercontent.com/112500643/192927742-5b81ff1f-d8ad-4c17-874e-88db707d51f7.png">
@@ -85,7 +86,8 @@ Two major issues often arise when scraping sports reference web pages, as shown 
 
 <br>
 
-**B) Sports Reference pastes a reminder of the column names after every 20 rows in the dataset, which creates useless observations within the dataset. **
+**B) Sports Reference pastes a reminder of the column names after every 20 rows in the dataset, which creates useless observations within the dataset.**
+
 <br>
 <br>
 
