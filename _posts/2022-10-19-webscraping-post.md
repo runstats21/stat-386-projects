@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Currency Exchange Rate Data Collection in an ever inflating global economy"
-date:   2022-10-19
+date:   2022-10-17
 author: Tyler Ward
 description: Rundown of data collection via ApiLayer's currency exchange rate API
 image: /assets/images/thailandstreetmarket.jpg
