@@ -10,12 +10,9 @@ image: /assets/images/thailandstreetmarket.jpg
 # Collecting Exchange Rate Data in Asia via APIlayer
 
 
+![Thai Night Market](https://user-images.githubusercontent.com/112500643/196481527-6901fff1-d0e9-4ccc-8f02-d719d07797cd.png)
 
 
-
-```python
-
-```
 
 ## Introduction
 
@@ -40,5 +37,10 @@ Why is this an interesting dataset?
 **My data:**
 
 ## Conclusion
+
+This is what I did!
+
+**Call** to action
+
 
 
