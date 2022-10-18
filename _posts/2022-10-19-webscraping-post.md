@@ -18,13 +18,17 @@ image: /assets/images/thailandstreetmarket.jpg
 
 In the post pandemic world of 2022, millions of people around the world were faced with inflation and rising rates worldwide, with the new york times reporting that ["the worst" may still be yet to come](https://www.nytimes.com/2022/10/11/business/imf-world-economy-forecast.html). In the Southeast Asian corridor, countries with currency already much lower in value than most of the west, face great economic risk as inflation has raised exchange rates at an unprecedented rate. 
 
-APILayer's [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api), allows for data collection of exchange rates for over 150 countries worldwide, including the nations in the Southeast Asia area. 
+APILayer's [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api) allows for data collection of exchange rates for over 150 countries worldwide, including the nations in the Southeast Asia area. Collecting this data will allow for analysis of economic conditions in the Asia area, of which I have a vested interest, having spent two years of my life in Bangkok, Thailand.
 
 
 ## Data Collection
 
+### Tools
 
-*Complete code can be found in the GitHub repo [here](insert link here)
+Using the 
+
+
+*Complete code for this data collection can be found in [this GitHub repo](insert link here)
 
 
 ### Step 1: Optain API key
