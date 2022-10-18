@@ -9,14 +9,16 @@ image: /assets/images/thailandstreetmarket.jpg
 
 # Collecting Exchange Rate Data in Asia via APIlayer
 
-
+[Thailand Night Market](https://trip101.com/article/food-markets-in-thailand)
 ![Thai Night Market](https://user-images.githubusercontent.com/112500643/196481527-6901fff1-d0e9-4ccc-8f02-d719d07797cd.png)
 
 
 
 ## Introduction
 
-Why is this an interesting dataset?
+In the post pandemic world of 2022, millions of people around the world were faced with inflation and rising rates worldwide, with the new york times reporting that ["the worst" may still be yet to come](https://www.nytimes.com/2022/10/11/business/imf-world-economy-forecast.html). In the Southeast Asian corridor, countries with currency already much lower in value than most of the west, face great economic risk as inflation has raised exchange rates at an unprecedented rate. 
+
+APILayer's [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api), allows for data collection of exchange rates for over 150 countries worldwide, including the nations in the Southeast Asia area. 
 
 
 ## Data Collection
