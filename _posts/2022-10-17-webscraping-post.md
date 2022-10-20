@@ -25,10 +25,10 @@ Documentation on the College Scorecard and associated API: [College Scorecard Do
 
 ### Tools
 
-Using the 
+Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API.
 
 
-*Complete code for this data collection can be found in [this GitHub repo]*([insert link here](https://github.com/runstats21/college-score-card-analysis))
+*Complete code for this data collection can be found in [this GitHub repo]*(https://github.com/runstats21/college-score-card-analysis)
 
 Another helpful GitHub repos for this analysis that helped me as I collected this data can be found [here](https://github.com/kiseki1107/College-Scorecard-Data-Analysis)
 
