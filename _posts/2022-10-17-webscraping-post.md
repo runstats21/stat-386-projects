@@ -30,6 +30,8 @@ Using the
 
 *Complete code for this data collection can be found in [this GitHub repo](insert link here)
 
+Another helpful GitHub repos for this analysis that helped me as I collected this data can be found [here](https://github.com/kiseki1107/College-Scorecard-Data-Analysis)
+
 
 ### Step 1: Optain API key
 
