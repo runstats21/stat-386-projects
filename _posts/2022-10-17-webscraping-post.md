@@ -20,6 +20,8 @@ In the post pandemic world of 2022, millions of people around the world were fac
 
 APILayer's [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api) allows for data collection of exchange rates for over 150 countries worldwide, including the nations in the Southeast Asia area. Collecting this data will allow for analysis of economic conditions in the Asia area, of which I have a vested interest, having spent two years of my life in Bangkok, Thailand.
 
+Documentation on the College Scorecard and associated API: [College Scorecard Documentation](https://collegescorecard.ed.gov/data/documentation/)
+
 
 ## Data Collection
 
