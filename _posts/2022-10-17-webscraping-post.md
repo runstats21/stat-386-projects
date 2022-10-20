@@ -1,24 +1,22 @@
 ---
 layout: post
-title:  "Currency Exchange Rate Data Collection in an ever inflating global economy"
+title:  "College Scoreboard: Data Collection of Higher Education sites via api.data.gov"
 date:   2022-10-17
 author: Tyler Ward
-description: Rundown of data collection via ApiLayer's currency exchange rate API
-image: /assets/images/thailandstreetmarket.jpg
+description: Rundown of data collection via College Scoreboards free government API
+image: /assets/images/US-dept-ed-seal.png
 ---
 
-# Collecting Exchange Rate Data in Asia via APIlayer
+# College Scoreboard Data Collection
 
-[Thailand Night Market](https://trip101.com/article/food-markets-in-thailand)
-![Thai Night Market](https://user-images.githubusercontent.com/112500643/196481527-6901fff1-d0e9-4ccc-8f02-d719d07797cd.png)
+[Brigham Young University](https://www.linkedin.com/school/brigham-young-university/mycompany/verification/)
+![BYU](https://user-images.githubusercontent.com/112500643/196997715-79f57fe4-b6ac-489a-aff0-571d9d9384fd.png)
 
 
 
 ## Introduction
 
-In the post pandemic world of 2022, millions of people around the world were faced with inflation and rising rates worldwide, with the new york times reporting that ["the worst" may still be yet to come](https://www.nytimes.com/2022/10/11/business/imf-world-economy-forecast.html). In the Southeast Asian corridor, countries with currency already much lower in value than most of the west, face great economic risk as inflation has raised exchange rates at an unprecedented rate. 
 
-APILayer's [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api) allows for data collection of exchange rates for over 150 countries worldwide, including the nations in the Southeast Asia area. Collecting this data will allow for analysis of economic conditions in the Asia area, of which I have a vested interest, having spent two years of my life in Bangkok, Thailand.
 
 Documentation on the College Scorecard and associated API: [College Scorecard Documentation](https://collegescorecard.ed.gov/data/documentation/)
 
