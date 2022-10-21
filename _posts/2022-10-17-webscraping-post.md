@@ -36,7 +36,7 @@ Documentation on the College Scorecard and associated API: [College Scorecard Do
 
 [Python's Requests Library](https://realpython.com/python-requests/)
 
-<img width="665" alt="image" src="https://user-images.githubusercontent.com/112500643/197099386-b8dd41cb-7bcf-4046-913a-e8d923196354.png">
+<img width="750" alt="image" src="https://user-images.githubusercontent.com/112500643/197099386-b8dd41cb-7bcf-4046-913a-e8d923196354.png">
 
 Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages.
 
