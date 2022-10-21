@@ -54,13 +54,26 @@ A simple search for "College Scoreboard API" will direct you to data documentati
 url = "http://api.data.gov/ed/collegescorecard/v1/schools?" # question mark will allow for (optional) arugments to be appended
 ```
 
-After saving this url you can register for an API key, which will promptly be sent to you via email.
+After saving this url you can register for an API key at the bottom of the page (see image below), which will promptly be sent to you via email. 
 
 <img width="956" alt="image" src="https://user-images.githubusercontent.com/112500643/197102279-684b1f1f-14a1-43b3-bdc0-64a0f13c4834.png">
 
+Look for an email with subject "Your API Key", from noreply@api.data.gov. Be sure to check your junk mail if it cannot be found in your normal inbox!
 
 
 ## Step 2: Prepare API key for GitHub
+
+In order to 
+
+
+Make apikey.txt
+
+
+Update .gitignore:
+
+```
+apikey.txt
+```
 
 ## Step 3: Identify field parameters of interest
 
