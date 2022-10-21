@@ -7,9 +7,8 @@ description: Education is powerful. This post shows how to collect data on thous
 image: /assets/images/US-dept-ed-seal.png
 ---
 
-# College Scoreboard Data Collection
 
-## Introduction
+# Introduction
 
 Since the onset of the COVID-19 pandemic, college enrollment in the US has declined for [three years straight](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/) (as reported by the [Washington Post](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/)), even with access to information greater than ever before. For both parents and young adolescents, many factors contribute to the decision to enroll in college, and to which institution(s) to enroll, including enrollement size, admission rates, and income after graduation. 
 
@@ -30,9 +29,9 @@ Documentation on the College Scorecard and associated API: [College Scorecard Do
 *Complete code for this data collection can be found in [this GitHub repo]*(https://github.com/runstats21/college-score-card-analysis)
 
 
-## Data Collection
+# Data Collection
 
-### Tools
+## Tools
 
 [Python's Requests Library](https://realpython.com/python-requests/)
 
@@ -46,18 +45,18 @@ Using the [requests module](https://pypi.org/project/requests/) within Python, I
 Another helpful GitHub repos for this analysis that helped me as I collected this data can be found [here](https://github.com/kiseki1107/College-Scorecard-Data-Analysis)
 
 
-### Step 1: Optain API key
+## Step 1: Optain API key
 
 A simple search for "College Scoreboard API" will direct you to data documentation for the Department of Education's free API. 
 [https://api.data.gov/signup/](https://api.data.gov/signup/)
 
-### Step 2: Prepare API key for GitHub
+## Step 2: Prepare API key for GitHub
 
-### Step 3: Identify required endpoint parameters
+## Step 3: Identify required endpoint parameters
 
-### Step 4: Gather data of interest
+## Step 4: Gather data of interest
 
-### Step 5: Data Cleaning of Percent variables
+## Step 5: Data Cleaning of Percent variables
 
 
 **My data:**
@@ -65,7 +64,7 @@ A simple search for "College Scoreboard API" will direct you to data documentati
 <img width="665" alt="image" src="https://user-images.githubusercontent.com/112500643/197097649-cdd0b9df-0c72-4da5-8c99-249a1f13e6a0.png">
 
 
-## Conclusion
+# Conclusion
 
 This is what I did!
 
