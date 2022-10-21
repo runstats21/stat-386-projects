@@ -45,16 +45,26 @@ Using the [requests module](https://pypi.org/project/requests/) within Python, I
 Another helpful GitHub repos for this analysis that helped me as I collected this data can be found [here](https://github.com/kiseki1107/College-Scorecard-Data-Analysis)
 
 
-## Step 1: Optain API key
+## Step 1: Optain API URL and API key 
 
-A simple search for "College Scoreboard API" will direct you to data documentation for the Department of Education's free API. 
-[https://api.data.gov/signup/](https://api.data.gov/signup/)
+A simple search for "College Scoreboard API" will direct you to data documentation for the Department of Education's free API. Specified there is the url location of the API **http://api.data.gov/ed/collegescorecard/**, and the endpoint for querying all data **/v1/schools**.
+
+```python
+# base url
+url = "http://api.data.gov/ed/collegescorecard/v1/schools?" # question mark will allow for (optional) arugments to be appended
+```
+
+After saving this url you can register for an API key, which will promptly be sent to you via email.
+
+<img width="956" alt="image" src="https://user-images.githubusercontent.com/112500643/197102279-684b1f1f-14a1-43b3-bdc0-64a0f13c4834.png">
+
+
 
 ## Step 2: Prepare API key for GitHub
 
-## Step 3: Identify required endpoint parameters
+## Step 3: Identify field parameters of interest
 
-## Step 4: Gather data of interest
+## Step 4: Gather corresponding data of interest
 
 ## Step 5: Data Cleaning of Percent variables
 
