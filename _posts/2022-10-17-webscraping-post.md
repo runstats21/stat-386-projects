@@ -12,7 +12,7 @@ image: /assets/images/US-dept-ed-seal.png
 
 Since the onset of the COVID-19 pandemic, college enrollment in the US has declined for [three years straight](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/) (as reported by the [Washington Post](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/)), even with access to information greater than ever before. For both parents and young adolescents, many factors contribute to the decision to enroll in college, and to which institution(s) to enroll, including enrollement size, admission rates, and income after graduation. 
 
-Frotunately, the U.S Department of Education
+Fortunately, the U.S Department of Education has a plethora of data on each of the universities in the United States, that is free for anyone to access after registering for an API key. This data can be used to discover the most desirable colleges in the nation, along with analysis of possible factors leading to a college being "one of the best", such as 
 
 
 
@@ -42,7 +42,8 @@ Using the [requests module](https://pypi.org/project/requests/) within Python, I
 
 
 
-Another helpful GitHub repos for this analysis that helped me as I collected this data can be found [here](https://github.com/kiseki1107/College-Scorecard-Data-Analysis)
+As I was working to collect desirable data from the API, I found a suburbly helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis)
+ from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which needed dictionary keys were provided ...
 
 
 ## Step 1: Optain API URL and API key 
