@@ -3,7 +3,7 @@ layout: post
 title:  "College Scoreboard: Accessing Higher Education Statistics with US Department of Education API"
 date:   2022-10-17
 author: Tyler Ward
-description: Education is powerful. This post shows how to collect data on thousands of Higher Education institutions nationwide.
+description: Education is powerful. This post outlines how to collect data on thousands of Higher Education institutions nationwide.
 image: /assets/images/US-dept-ed-seal.png
 ---
 
