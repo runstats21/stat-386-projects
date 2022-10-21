@@ -12,7 +12,7 @@ image: /assets/images/US-dept-ed-seal.png
 
 Since the onset of the COVID-19 pandemic, college enrollment in the US has declined for [three years straight](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/) (as reported by the [Washington Post](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/)), even with access to information greater than ever before. For both parents and young adolescents, many factors contribute to the decision to enroll in college, and to which institution(s) to enroll, including enrollement size, admission rates, and income after graduation. 
 
-Fortunately, the U.S Department of Education has a plethora of data on each of the universities in the United States, that is free for anyone to access after registering for an API key. This data can be used to discover the most desirable colleges in the nation, along with analysis of possible factors leading to a college being "one of the best", such as  ...
+Fortunately, the U.S Department of Education has a plethora of data on each of the universities in the United States, that is free for anyone to access after registering for an API key. This data can be used to discover the most desirable colleges in the nation, and will also allow for analysis of the reltionships between different college statistics, such as the relationship between faculty salary and student income 6 years after entry, or between admission rate and completion rate.
 
 
 
@@ -78,7 +78,8 @@ After saving this url you can register for an API key, which will promptly be se
 
 This is what I did!
 
-**Call** to action
+In the next post I will perform analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to collect your own data from the College Scorecard API, and give me feedback on any issues you run into, and prepare to analyze the data yourself!
+
 
 
 
