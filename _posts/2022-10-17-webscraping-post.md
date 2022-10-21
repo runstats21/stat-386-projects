@@ -42,7 +42,7 @@ Using the [requests module](https://pypi.org/project/requests/) within Python, I
 
 
 
-Additionally, as I was working to collect desirable data from the API, I found a suburbly helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 3 below.
+Additionally, as I was working to collect desirable data from the API, I found an extremely helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 3 below.
 
 
 ## Step 1: Optain API URL and API key 
