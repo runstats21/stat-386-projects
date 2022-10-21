@@ -11,7 +11,11 @@ image: /assets/images/US-dept-ed-seal.png
 
 ## Introduction
 
-Since the onset of the COVID-19 pandemic, college enrollment in the US has declined for [three years straight](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/) (as reported by the [Washington Post](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/)), even with access to information greater than ever before. For both parents and young adolescents, many factors contribute to the decision to enroll in college, and to which institution(s) to enroll. 
+Since the onset of the COVID-19 pandemic, college enrollment in the US has declined for [three years straight](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/) (as reported by the [Washington Post](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/)), even with access to information greater than ever before. For both parents and young adolescents, many factors contribute to the decision to enroll in college, and to which institution(s) to enroll, including enrollement size, admission rates, and income after graduation. 
+
+Frotunately, the U.S Department of Education
+
+
 
 
 
@@ -30,7 +34,11 @@ Documentation on the College Scorecard and associated API: [College Scorecard Do
 
 ### Tools
 
-Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr library](https://httr.r-lib.org/).
+[Python's Requests Library](https://realpython.com/python-requests/)
+
+![image](https://user-images.githubusercontent.com/112500643/197099386-b8dd41cb-7bcf-4046-913a-e8d923196354.png)
+
+Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages.
 
 
 
@@ -39,6 +47,9 @@ Another helpful GitHub repos for this analysis that helped me as I collected thi
 
 
 ### Step 1: Optain API key
+
+A simple search for "College Scoreboard API" will direct you to data documentation for the Department of Education's free API. 
+[https://api.data.gov/signup/](https://api.data.gov/signup/)
 
 ### Step 2: Prepare API key for GitHub
 
@@ -51,7 +62,7 @@ Another helpful GitHub repos for this analysis that helped me as I collected thi
 
 **My data:**
 
-<img width="564" alt="image" src="https://user-images.githubusercontent.com/112500643/197097273-b7fe1587-3b0f-4239-90d9-a4596270d338.png">
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/112500643/197097649-cdd0b9df-0c72-4da5-8c99-249a1f13e6a0.png">
 
 
 ## Conclusion
