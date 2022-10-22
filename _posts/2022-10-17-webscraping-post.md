@@ -77,11 +77,43 @@ with open('apikey.txt', 'r') as file:
 
 
 
-## Step 3: Identify field parameters of interest
+## Step 3: Perform base url API call with base parameters
 
-With the base url ready, I used `requests.get()` function to extract data from the API.
+With the base url ready, I used `requests.get()` function to extract data from the API. Along with the API key, any conditional parameters should be specified, such as what types of colleges to select from
 
-To extract desired data variables from the json file, the correct listings on the dictionary must be specified. For example, the following dictionary, which I used, allows for extraction of 40 different variables related to School, Cost, Admission, and Earnings.
+```python
+# conditional parameters
+params = {
+    "api_key":apikey,
+    "school.degrees_awarded.predominant":"3", # predominantly bachelors degree awarding
+    "school.operating":"1" # school operating = True
+}
+```
+
+These conditional parameters allow for an API call to ensure api key and query will work, and observe the available data using the `.json()` method:
+
+```python
+# pull from api using requests and conditional parameters (including api key)
+r = requests.get(url, params=params)
+r.json()
+```
+Example json output:
+```
+{'metadata': {'page': 0, 'total': 1989, 'per_page': 20},
+ 'results': [{'latest': {'school': {'zip': '35762',
+     'city': 'Normal',
+     'name': 'Alabama A & M University',
+     'alias': 'AAMU',
+     'state': 'AL',
+ ...
+ }
+```
+
+Information on the the developer friendly codes for these and other field parameters can be found in the full [College Scorecard Data Dictionary](https://collegescorecard.ed.gov/data/documentation/)
+
+## Step 4: Store field parameters of interest as dictionary and URL string
+
+As with the conditional parameters, extraction of desired data variables from the json file, the correct listings on the dictionary must be specified. For example, the following dictionary, which I used, allows for extraction of 40 different variables related to School, Cost, Admission, and Earnings.
 
 ```python
 # Dictionary of all desired fields
@@ -136,7 +168,13 @@ fields = {
       "Mean Earnings Medium (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.mean_earnings.middle_tercile",
       "Mean Earnings High (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.mean_earnings.highest_tercile"
      }
-    
+```
+
+The values from this dictionary (i.e., the developer friendly codes) should be appended together into one fields url string, that can be used for the full API query to make a full dataset of interest. 
+
+Code to organize field parameter values together into one url:
+
+```python
 # Appending all the fields values together into one "fields_url"
 fields_url = ""
 for key, val in fields.items():
@@ -147,23 +185,18 @@ fields_url = fields_url[:-1]
 fields_url
 ```
 
-
-
-## Step 4: Gather corresponding data of interest
+## Step 5: Gather corresponding data of interest
 
 
 
-## Step 5: Data Cleaning of Percent variables
-
-
-**My data:**
+And with that, **here is my data!**
 
 <img width="665" alt="image" src="https://user-images.githubusercontent.com/112500643/197097649-cdd0b9df-0c72-4da5-8c99-249a1f13e6a0.png">
 
 
 # Conclusion
 
-This is what I did!
+I was able to collect data from the College Scorecard API
 
 In the next post I will perform analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to collect your own data from the College Scorecard API, and give me feedback on any issues you run into, and prepare to analyze the data yourself!
 
