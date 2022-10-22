@@ -33,7 +33,7 @@ A later post will outline exploratory analysis and insights from this dataset to
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/112500643/197099386-b8dd41cb-7bcf-4046-913a-e8d923196354.png">
 
-Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages.
+Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages. As noted on the College Scorecard website, this data is free and easily accessible by anyone.
 
 
 Additionally, as I was working to collect desirable data from the API, I found an extremely helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 3 below.
