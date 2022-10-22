@@ -59,19 +59,22 @@ Look for an email with subject "Your API Key", from noreply@api.data.gov. *Be su
 
 In order to share the code for data collection without comprimising my API key, I needed to:
 
-* Paste and sace the API key into a text file
-* Add the text file name to my .gitignore file
-* Move the text file into my working directory and save it as an object in my Jupyter Notebook
-
-
-Make apikey.txt
-
-
-Update .gitignore:
+* Paste and save the API key into a text file (e.g., "apikey.txt"
+* Add the text file name to my .gitignore file, e.g.:
 
 ```
 apikey.txt
 ```
+
+* Move the text file into my working directory and save it as an object in my Jupyter Notebook
+
+```python
+# load and save api_key
+with open('apikey.txt', 'r') as file:
+    apikey = file.read()
+```
+
+
 
 ## Step 3: Identify field parameters of interest
 
