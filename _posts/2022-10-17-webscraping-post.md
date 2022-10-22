@@ -35,7 +35,7 @@ A later post will outline exploratory analysis and insights from this dataset to
 
 Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages. As noted on the College Scorecard website, this data is free and easily accessible by anyone. 
 
-As I was working to collect desirable data from the API, I found an extremely helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 3 below.
+As I was working to collect desirable data from the API, I found an extremely helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 4 below.
 
 Steps for collecting data from this wonderful resource are outlined below.
 
@@ -67,7 +67,7 @@ In order to share the code for data collection without comprimising my API key, 
 apikey.txt
 ```
 
-* Move the text file into my working directory and save it as an object in my Jupyter Notebook
+* Move the text file into my working directory and save it as an object in my Jupyter Notebook:
 
 ```python
 # load and save api_key
@@ -76,10 +76,9 @@ with open('apikey.txt', 'r') as file:
 ```
 
 
-
 ## Step 3: Perform base url API call with base parameters
 
-With the base url ready, I used `requests.get()` function to extract data from the API. Along with the API key, any conditional parameters should be specified, such as what types of colleges to select from
+With the base url ready, I used `requests.get()` function to extract data from the API. Along with the API key, any conditional parameters should be specified, such as what types of colleges to select from.
 
 ```python
 # conditional parameters
@@ -90,7 +89,7 @@ params = {
 }
 ```
 
-These conditional parameters allow for an API call to ensure api key and query will work, and observe the available data using the `.json()` method:
+These conditional parameters allow for an API call to ensure api key and query will work, and observe the available data using the `.json()` method. I also used this already-working url as a based to append my the field urls to below (see Step 4 and 5) in order to query desired variables of interest.
 
 ```python
 # pull from api using requests and conditional parameters (including api key)
@@ -170,7 +169,7 @@ fields = {
      }
 ```
 
-The values from this dictionary (i.e., the developer friendly codes) should be appended together into one fields url string, that can be used for the full API query to make a full dataset of interest. 
+The values from this dictionary (i.e., the developer friendly codes) should be appended together into one fields url string, that can be used for the full API query to make a full dataset of interest. As noted earlier, Clarence Li's [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis/blob/master/DataCollection_Cleansing.ipynb) ws the source of this portion of the code.
 
 Code to organize field parameter values together into one url:
 
@@ -187,7 +186,33 @@ fields_url
 
 ## Step 5: Gather corresponding data of interest
 
+Lastly, using the meta data to extract how many pages are available that match my conditional parameters, I used a loop functionality (as [used by Clarence Li](https://github.com/kiseki1107/College-Scorecard-Data-Analysis/blob/master/DataCollection_Cleansing.ipynb)) to get information from almost 2000 predominately bacehlor's degree awarding universities (100 per page for 20 pages). As show below, the keys in the `fields` dictionary are used as variable names, while the values pulled in the API query are used as the data values.
 
+```python
+# get and save max page number
+max_page_num = r.json()['metadata']['total']//100 + 1
+
+# Construct df via looping through all pages
+college_df = []
+per_page = 100
+
+for page_num in range(0,max_page_num):
+    query_url = f'{r.url}&fields={fields_url}&page={page_num}&_per_page={per_page}'
+    response = requests.get(query_url).json()
+    
+    for i in range(len(response["results"])):
+        result_row = {}
+        
+        for key, val in fields.items(): # set key as var name and value as value
+            try:
+                result_row[key] = response["results"][i][val]
+            except KeyError:
+                print(f"{key} key not found")
+                
+        college_df.append(result_row)
+
+college_df = pd.DataFrame(college_df)
+```
 
 And with that, **here is my data!**
 
@@ -196,9 +221,9 @@ And with that, **here is my data!**
 
 # Conclusion
 
-I was able to collect data from the College Scorecard API
+I was able to collect data regarding approximately 2000 universities in the United States from the College Scorecard API. The resulting dataset contains 40 descriptive variables that can be used to compare universities, and to understand general trends and patterns among higher education institutions, including what makes certain universities "the best". I am excited to further analyze this data to help those deciding on their own college education on where the right place to study is for them, as well as developing insights into what parts of university structure lead to higher earnings by graduates, higher retention of students, and the role of univeristy size in these variables.
 
-In the next post I will perform analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to collect your own data from the College Scorecard API, and give me feedback on any issues you run into, and prepare to analyze the data yourself!
+In the next post I will perform this analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to collect your own data from the College Scorecard API, and give me feedback on any issues you run into, and prepare to analyze the data yourself!
 
 
 
