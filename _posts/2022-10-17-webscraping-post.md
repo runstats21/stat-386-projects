@@ -14,16 +14,12 @@ Since the onset of the COVID-19 pandemic, college enrollment in the US has decli
 
 Fortunately, the U.S Department of Education has a plethora of data on each of the universities in the United States, that is free for anyone to access after registering for an API key. This data can be used to discover the most desirable colleges in the nation, and will also allow for analysis of the reltionships between different college statistics, such as the relationship between faculty salary and student income 6 years after entry, or between admission rate and completion rate.
 
+[College Scorecard Documentation](https://collegescorecard.ed.gov/data/documentation/)
 
-
-
-
-Documentation on the College Scorecard and associated API: [College Scorecard Documentation](https://collegescorecard.ed.gov/data/documentation/)
+A later post will outline exploratory analysis and insights from this dataset to be able to understand key factors in top tier higher education, and which universities qualify as "the top" schools in the nation.
 
 [Brigham Young University](https://www.linkedin.com/school/brigham-young-university/mycompany/verification/)
 ![BYU](https://user-images.githubusercontent.com/112500643/196997715-79f57fe4-b6ac-489a-aff0-571d9d9384fd.png)
-
-
 
 
 *Complete code for this data collection can be found in [this GitHub repo]*(https://github.com/runstats21/college-score-card-analysis)
@@ -38,8 +34,6 @@ Documentation on the College Scorecard and associated API: [College Scorecard Do
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/112500643/197099386-b8dd41cb-7bcf-4046-913a-e8d923196354.png">
 
 Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages.
-
-
 
 
 Additionally, as I was working to collect desirable data from the API, I found an extremely helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 3 below.
@@ -58,7 +52,7 @@ After saving this url you can register for an API key at the bottom of the page 
 
 <img width="956" alt="image" src="https://user-images.githubusercontent.com/112500643/197102279-684b1f1f-14a1-43b3-bdc0-64a0f13c4834.png">
 
-Look for an email with subject "Your API Key", from noreply@api.data.gov. Be sure to check your junk mail if it cannot be found in your normal inbox!
+Look for an email with subject "Your API Key", from noreply@api.data.gov. *Be sure to check your junk mail if it cannot be found in your normal inbox!*
 
 
 ## Step 2: Prepare API key for GitHub
