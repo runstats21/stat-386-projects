@@ -33,10 +33,11 @@ A later post will outline exploratory analysis and insights from this dataset to
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/112500643/197099386-b8dd41cb-7bcf-4046-913a-e8d923196354.png">
 
-Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages. As noted on the College Scorecard website, this data is free and easily accessible by anyone.
+Using the [requests module](https://pypi.org/project/requests/) within Python, I was able to obtain valuable information on almost 2000 University's throughout the U.S. via the College Scoreboard government API. However, any resource that allows for API calls will work following a similar process, such as using R's [httr](https://httr.r-lib.org/) and [jsonlite](https://www.rdocumentation.org/packages/jsonlite/versions/1.8.2) packages. As noted on the College Scorecard website, this data is free and easily accessible by anyone. 
 
+As I was working to collect desirable data from the API, I found an extremely helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 3 below.
 
-Additionally, as I was working to collect desirable data from the API, I found an extremely helpful [GitHub repos](https://github.com/kiseki1107/College-Scorecard-Data-Analysis) from [Clarence Li (kiseki1107)](https://github.com/kiseki1107) which outlined the keys he used to get desired data values from the API. I used his framework for my own data collection, outlined in more detail in Step 3 below.
+Steps for collecting data from this wonderful resource are outlined below.
 
 
 ## Step 1: Optain API URL and API key 
@@ -78,7 +79,79 @@ with open('apikey.txt', 'r') as file:
 
 ## Step 3: Identify field parameters of interest
 
+With the base url ready, I used `requests.get()` function to extract data from the API.
+
+To extract desired data variables from the json file, the correct listings on the dictionary must be specified. For example, the following dictionary, which I used, allows for extraction of 40 different variables related to School, Cost, Admission, and Earnings.
+
+```python
+# Dictionary of all desired fields
+year = "latest" # get latest data
+fields = {
+      # School Category
+      "School Name": "school.name",
+      "School ID": "id",
+      "School State": "school.state",
+      "School Ownership": "school.ownership",
+      "Full-time Faculty Rate (%)": "school.ft_faculty_rate",
+      "Faculty's average salary per month": "school.faculty_salary",
+      # Student Category
+      "Student Enrollment Size": year + ".student.size",
+      "Student Enrollment All": year + ".student.enrollment.all",
+      "Male Students (%)": year + ".student.demographics.men",
+      "Female Students (%)": year + ".student.demographics.women",
+      "Retention Rate 4 Yr (%)": year + ".student.retention_rate.four_year.full_time",
+      # Cost Category
+      "Attendance Cost per Academic Year": year + ".cost.attendance.academic_year",
+      # Completion Category
+      "150% Completion Rate at 4 Yr (%)": year + ".completion.completion_rate_4yr_150nt",
+      # Admissions Category 
+      "Admission Rate (%)": year + ".admissions.admission_rate.overall",
+      "SAT Average Overall": year + ".admissions.sat_scores.average.overall",
+      "SAT 75th Percentile Critical Math": year + ".admissions.sat_scores.75th_percentile.math",
+      "SAT 75th Percentile Critical Reading": year + ".admissions.sat_scores.75th_percentile.critical_reading",
+      "SAT 75th Percentile Critical Writing": year + ".admissions.sat_scores.75th_percentile.writing",
+      ## Earnings Category
+      # 6 Years after Enrollment:
+      "Mean Earnings (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.working_not_enrolled.mean_earnings",
+      "Mean Male Earnings (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.mean_earnings.male_students",
+      "Mean Female Earnings (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.mean_earnings.female_students",
+      "Std. Deviation Earning (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.working_not_enrolled.std_dev",
+      "Percent of Students Earning >$25K (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.percent_greater_than_25000",
+      "Low Income Students (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.working_not_enrolled.income.lowest_tercile",
+      "Medium Income Students (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.working_not_enrolled.income.middle_tercile",
+      "High Income Students (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.working_not_enrolled.income.highest_tercile",
+      "Mean Earnings Low (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.mean_earnings.lowest_tercile",
+      "Mean Earnings Medium (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.mean_earnings.middle_tercile",
+      "Mean Earnings High (6 Yrs after Entry)": year + ".earnings.6_yrs_after_entry.mean_earnings.highest_tercile",
+      # 10 Years after Enrollment:
+      "Mean Earnings (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.working_not_enrolled.mean_earnings",
+      "Mean Male Earnings (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.mean_earnings.male_students",
+      "Mean Female Earnings (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.mean_earnings.female_students",
+      "Std. Deviation Earning (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.working_not_enrolled.std_dev",
+      "Percent of Students Earning >$25K (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.percent_greater_than_25000",
+      "Low Income Students (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.working_not_enrolled.income.lowest_tercile",
+      "Medium Income Students (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.working_not_enrolled.income.middle_tercile",
+      "High Income Students (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.working_not_enrolled.income.highest_tercile",
+      "Mean Earnings Low (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.mean_earnings.lowest_tercile",
+      "Mean Earnings Medium (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.mean_earnings.middle_tercile",
+      "Mean Earnings High (10 Yrs after Entry)": year + ".earnings.10_yrs_after_entry.mean_earnings.highest_tercile"
+     }
+    
+# Appending all the fields values together into one "fields_url"
+fields_url = ""
+for key, val in fields.items():
+    fields_url = fields_url + val + ","
+
+# To remove the extra "," at the end of fields_url
+fields_url = fields_url[:-1]
+fields_url
+```
+
+
+
 ## Step 4: Gather corresponding data of interest
+
+
 
 ## Step 5: Data Cleaning of Percent variables
 
