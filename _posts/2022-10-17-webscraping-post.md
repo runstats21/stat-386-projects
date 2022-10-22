@@ -57,7 +57,11 @@ Look for an email with subject "Your API Key", from noreply@api.data.gov. *Be su
 
 ## Step 2: Prepare API key for GitHub
 
-In order to 
+In order to share the code for data collection without comprimising my API key, I needed to:
+
+* Paste and sace the API key into a text file
+* Add the text file name to my .gitignore file
+* Move the text file into my working directory and save it as an object in my Jupyter Notebook
 
 
 Make apikey.txt
