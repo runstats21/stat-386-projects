@@ -223,6 +223,10 @@ And with that, **here is my data!**
 
 I was able to collect data regarding approximately 2000 universities in the United States from the College Scorecard API. The resulting dataset contains 40 descriptive variables that can be used to compare universities, and to understand general trends and patterns among higher education institutions, including what makes certain universities "the best". I am excited to further analyze this data to help those deciding on their own college education on where the right place to study is for them, as well as developing insights into what parts of university structure lead to higher earnings by graduates, higher retention of students, and the role of univeristy size in these variables.
 
+[Massachusetts Institute of Technology](https://www.mit.edu/about/)
+![MIT](https://user-images.githubusercontent.com/112500643/197324610-a92462b4-02dd-4e4e-9bcc-839747ed969f.png)
+
+
 In the next post I will perform this analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to collect your own data from the College Scorecard API, and give me feedback on any issues you run into, and prepare to analyze the data yourself!
 
 
