@@ -228,9 +228,9 @@ I was able to collect data regarding approximately 2000 universities in the Unit
 
 
 In the next post I will perform this analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to:
-* collect your own data from the College Scorecard API,
-* give me feedback on any issues you run into,
-* and prepare to analyze the data yourself!
+* Collect your own data from the College Scorecard API
+* Give me feedback on any issues you run into, and
+* Prepare to analyze the data yourself!
 
 
 
