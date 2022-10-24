@@ -12,17 +12,17 @@ image: /assets/images/US-dept-ed-seal.png
 
 Since the onset of the COVID-19 pandemic, college enrollment in the US has declined for [three years straight](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/) (as reported by the [Washington Post](https://www.washingtonpost.com/education/2022/10/20/college-enrollment-declines-since-pandemic/)), even with access to information greater than ever before. For both parents and young adolescents, many factors contribute to the decision to enroll in college, and to which institution(s) to enroll, including enrollement size, admission rates, and income after graduation. 
 
-Fortunately, the U.S Department of Education has a plethora of data on each of the universities in the United States, that is free for anyone to access after registering for an API key. This data can be used to discover the most desirable colleges in the nation, and will also allow for analysis of the reltionships between different college statistics, such as the relationship between faculty salary and student income 6 years after entry, or between admission rate and completion rate.
+Fortunately, the U.S Department of Education has a plethora of data on each of the universities in the United States, that is free for anyone to access after registering for an API key. This data can be used to discover the most desirable colleges in the nation, and will also allow for analysis of the reltionships between different college statistics, such as the relationship between faculty salary and student income 6 years after entry, or between admission rate and completion rate. 
 
-[College Scorecard Documentation](https://collegescorecard.ed.gov/data/documentation/)
-
-A later post will outline exploratory analysis and insights from this dataset to be able to understand key factors in top tier higher education, and which universities qualify as "the top" schools in the nation.
+Full documentation for this API can be found here: [College Scorecard Documentation](https://collegescorecard.ed.gov/data/documentation/)
 
 [Brigham Young University](https://www.linkedin.com/school/brigham-young-university/mycompany/verification/)
 ![BYU](https://user-images.githubusercontent.com/112500643/196997715-79f57fe4-b6ac-489a-aff0-571d9d9384fd.png)
 
 
-*Complete code for this data collection can be found in [this GitHub repo]*(https://github.com/runstats21/college-score-card-analysis)
+A later post will outline exploratory analysis and insights from this dataset to be able to understand key factors in top tier higher education, and which universities qualify as "the top" schools in the nation.
+
+*Complete code* for this data collection can be found in [this GitHub repo](https://github.com/runstats21/college-score-card-analysis)
 
 
 # Data Collection
