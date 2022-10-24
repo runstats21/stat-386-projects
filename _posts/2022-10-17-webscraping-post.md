@@ -227,7 +227,10 @@ I was able to collect data regarding approximately 2000 universities in the Unit
 ![MIT](https://user-images.githubusercontent.com/112500643/197324610-a92462b4-02dd-4e4e-9bcc-839747ed969f.png)
 
 
-In the next post I will perform this analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to collect your own data from the College Scorecard API, and give me feedback on any issues you run into, and prepare to analyze the data yourself!
+In the next post I will perform this analysis outlining interesting relationships between the myriad of college statistics now contained in my dataset. In the mean time, I challenge you to:
+* collect your own data from the College Scorecard API,
+* give me feedback on any issues you run into,
+* and prepare to analyze the data yourself!
 
 
 
