@@ -22,7 +22,7 @@ Full documentation for this API can be found here: [College Scorecard Documentat
 
 A later post will outline exploratory analysis and insights from this dataset to be able to understand key factors in top tier higher education, and which universities qualify as "the top" schools in the nation.
 
-*Complete code* for this data collection can be found in [this GitHub repo](https://github.com/runstats21/college-score-card-analysis)
+*Complete code* for this data collection can be found in [my GitHub repo](https://github.com/runstats21/college-score-card-analysis): [college-score-card-analysis](https://github.com/runstats21/college-score-card-analysis)
 
 
 # Data Collection
