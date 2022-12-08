@@ -14,7 +14,7 @@ summarize entire project here
 
 ## Data Story
 
-## ***insert main graphic here***
+{% include final_figure.html %}
 
 ## GitHub Repository
 
