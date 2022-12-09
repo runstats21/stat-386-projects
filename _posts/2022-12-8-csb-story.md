@@ -12,9 +12,9 @@ image: /assets/images/stanford.jpg
 Photo by <a href="https://unsplash.com/@supuloo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Su puloo</a> on <a href="https://unsplash.com/s/photos/Brigham-Young-University?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 
-# College Scoreboard Analysis
+# College Scorecard Analysis
 
-summarize entire project here
+About a month ago I began analysis of data from approximately 2000 colleges and universities in the United States of America. These data are publicly available and are updated regularly by the U.S Department of Education. Using their specified [College Scorecard](https://collegescorecard.ed.gov/data/documentation/) API, I was able to collect 40 different data points for each of approximately 2000 four-year bachelors degree awarding colleges nationwide. I then completed exploratory analysis of several of the collected variables, including many graphics produced with Python's [seaborn](https://seaborn.pydata.org/) and [plotly express](https://plotly.com/python/plotly-express/) packages.
 
 ## Data Story
 
@@ -22,4 +22,8 @@ summarize entire project here
 
 ## GitHub Repository
 
-## Conclusion
+Full code for this graphic and my whole analysis (data collection, EDA, and interactive graphics) can be found at my [College Scorecard Analysis](https://github.com/runstats21/college-score-card-analysis) GitHub repository [here](https://github.com/runstats21/college-score-card-analysis).
+
+## Moving Forward
+
+I'm excited to continue analysis of these data as it is updated through the coming months and years including production of predictive models to better understand and predict meaning metrics of sucessful universities such retention rates. In the mean time, I invite you to share your thoughts with me on in the comments below and don't hesitate to reach out over Linkedin to connect further.
