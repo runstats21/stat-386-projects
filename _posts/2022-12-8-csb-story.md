@@ -3,7 +3,7 @@ layout: post
 title:  "Come and Stay: College Retention Rates in the United States"
 date:   2022-12-08
 author: Tyler Ward
-description: What factors contribute to student retention at U.S. colleges? This post examines two key factors based on data from the Department of Education's College Scorecard
+description: What factors contribute to student retention at U.S. colleges? This post examines two key factors based on U.S. Department of Education College Scorecard data
 image: /assets/images/stanford.jpg
 ---
 
