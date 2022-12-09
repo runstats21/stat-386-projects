@@ -7,6 +7,8 @@ description: What factors contribute to student retention at U.S. colleges? This
 image: /assets/images/stanford.jpg
 ---
 
+![su-puloo-GBVZyAWf014-unsplash](https://user-images.githubusercontent.com/112500643/206622042-6354f947-2ebc-4d70-bda7-45f74e0ecd57.jpg)
+
 Photo by <a href="https://unsplash.com/@supuloo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Su puloo</a> on <a href="https://unsplash.com/s/photos/Brigham-Young-University?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 
