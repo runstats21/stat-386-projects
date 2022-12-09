@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "[IN PROGRESS]Come and Stay: College Retention Rates in the USA"
+title:  "Come and Stay: College Retention Rates in the United States"
 date:   2022-12-08
 author: Tyler Ward
-description: Using analysis of U.S. college data, this post outlines some factors leading to high earnings for students 10 years after beginning college
-image: /assets/images/sunset-college.jpg
+description: What factors contribute to student retention at U.S. colleges? This post examines two key factors based on data from the Department of Education's College Scorecard
+image: /assets/images/stanford.jpg
 ---
+
+Photo by <a href="https://unsplash.com/@supuloo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Su puloo</a> on <a href="https://unsplash.com/s/photos/Brigham-Young-University?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 
 # College Scoreboard Analysis
