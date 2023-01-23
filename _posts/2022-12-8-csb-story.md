@@ -27,8 +27,7 @@ Each of these findings let me to dig deeper into the data and build interactive 
 As shown by the graphic below, there appears to be a clear positive relationship between the average faculty salary and the four-year retention rate at U.S universities. Though there are some exceptionally prestiguous universities such as Stanford, Harvard, Princeton and Yale who's retention rates appear lower than most universities relative to the average salary of their faculty, the many universities seem to have retention rates approaching 80 percent when faculty salary is 100 thousand or more on average, with almost all retention rates exceeding 80% as average faculty salary approachs 150 thousand. However, high retention rates seem to be even better explained by SAT Scores. Clearly shown by the orange points, almost all of Top 25% of schools by average overall SAT score have retention rates above 80%, making up most of the 33.74% of bachelor's degree awarding universites with retention rates above 80%. Clear decline of retention rates can be seen for universities at with lower average SAT scores. Therefore, it seems clear that both student preparedness and investment in faculty, as represented by SAT scores and faculty salary, contribute to college four-year retention rates.
 
 
-
-{% include final_figure.html %}
+{% include rrbyfacsal.html %}
 
 ## GitHub Repository
 
